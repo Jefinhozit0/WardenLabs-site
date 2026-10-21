@@ -1,0 +1,5 @@
+# Arquivos locais que não fazem parte do site
+Warden Labs.html
+.vscode/
+node_modules/
+package-lock.json
