@@ -12,7 +12,7 @@
   }
   var intro = loader && loader.isConnected ? 1350 : 0;
 
-  // Títulos entram palavra por palavra
+  // O título principal entra palavra por palavra
   function splitWords(el) {
     var i = 0;
     (function walk(node) {
@@ -39,28 +39,6 @@
       h.style.setProperty('--d', (intro + 80) + 'ms');
       h.classList.add('words-in');
     });
-    var heads = document.querySelectorAll('.h2');
-    if ('IntersectionObserver' in window) {
-      var wordObs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (!e.isIntersecting) return;
-          e.target.classList.add('words-in');
-          wordObs.unobserve(e.target);
-        });
-      }, { rootMargin: '0px 0px -12% 0px' });
-      heads.forEach(function (h) { splitWords(h); wordObs.observe(h); });
-    }
-  }
-
-  // Brilho que segue o cursor nos cartões
-  if (!reduce && finePointer) {
-    document.addEventListener('pointermove', function (ev) {
-      var c = ev.target.closest && ev.target.closest('.card, .feature');
-      if (!c) return;
-      var r = c.getBoundingClientRect();
-      c.style.setProperty('--mx', (ev.clientX - r.left) + 'px');
-      c.style.setProperty('--my', (ev.clientY - r.top) + 'px');
-    }, { passive: true });
   }
 
   // Cabeçalho ganha borda ao rolar

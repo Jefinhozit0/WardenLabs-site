@@ -23,7 +23,7 @@ public/            ← tudo que vai para o ar
 ## Atualizar o site
 
 1. Edite os arquivos dentro de `public/`. Se mexer no CSS ou no JS, aumente o número em
-   `styles.css?v=6` / `main.js?v=6` nos quatro HTML (index, landing-pages, portal-de-processos e 404).
+   `styles.css?v=7` / `main.js?v=7` nos quatro HTML (index, landing-pages, portal-de-processos e 404).
 2. Em dash.cloudflare.com › Workers & Pages › **wardenlabs** › **Create deployment**,
    arraste a pasta `public` e clique em **Deploy**.
 
