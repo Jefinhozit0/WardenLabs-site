@@ -229,7 +229,14 @@ function posa(clip, t) {
   b.head.rotation.y = p.olharX * 0.5 - 0.25 * p.aceno;
   b.head.rotation.x = p.olharY * 0.22;
   b.head.rotation.z = -p.olharX * 0.06 + p.inclina;
-  b.eyes.position.set(p.olharX * 0.07, 0.42 - p.olharY * 0.04, 0.5);
+  b.eyes.rotation.set(p.olharY * 0.13, p.olharX * 0.2, 0);
+  // partes do Brasa futurista: arcos holográficos, anéis do núcleo, propulsor e cabeça flutuante
+  b.orbit.rotation.z = t * 0.35;
+  b.coreRings[0].rotation.y = t * 1.1;
+  b.coreRings[1].rotation.x = 0.4 + t * 0.8;
+  const empuxo = 0.85 + Math.sin(t * 1.25 + Math.PI) * 0.12 + Math.sin(t * 17) * 0.04;
+  b.flame.scale.set(0.5 * empuxo, 0.72 * empuxo, 1);
+  b.head.position.y = 1.72 + Math.sin(t * 1.25 - 0.9) * 0.025;
 
   // Braços e lanterna
   b.armR.rotation.z = -0.32 + Math.sin(t * 1.6) * 0.045 + p.bracoLanterna;
