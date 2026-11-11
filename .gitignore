@@ -3,3 +3,6 @@ Warden Labs.html
 .vscode/
 node_modules/
 package-lock.json
+
+# Vídeos gerados do Brasa (refazer com npm run videos em marketing/brasa/animacoes)
+marketing/brasa/animacoes/videos/
