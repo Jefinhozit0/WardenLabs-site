@@ -21,9 +21,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/assets/css/site.css?v=12">
+  <link rel="stylesheet" href="/assets/css/site.css?v=13">
   <script src="/assets/js/site.js?v=11" defer></script>
-  <script type="module" src="/assets/js/brasa3d.js?v=8"></script>
+  <script type="module" src="/assets/js/brasa3d.js?v=9"></script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -108,42 +108,48 @@
           <div class="brasa-3d" data-brasa3d></div>
           <div class="brasa-wrap">
             <div class="brasa-float">
-              <svg viewBox="0 0 252 280" role="img" aria-label="Brasa, o guardião de pedra da Warden Labs, segurando uma lanterna acesa">
+              <svg viewBox="0 0 252 280" role="img" aria-label="Brasa, o robô guardião da Warden Labs, erguendo um núcleo de luz">
                 <defs>
                   <radialGradient id="wlGlow" cx="50%" cy="50%" r="50%">
                     <stop offset="0" stop-color="#f5b042" stop-opacity="0.55"></stop>
                     <stop offset="1" stop-color="#f5b042" stop-opacity="0"></stop>
                   </radialGradient>
-                  <clipPath id="wlTorso"><rect x="52" y="128" width="136" height="112" rx="24"></rect></clipPath>
+                  <clipPath id="wlTorso"><path d="M62 150 C62 132 80 128 120 128 C160 128 178 132 178 150 C178 196 150 232 120 238 C90 232 62 196 62 150 Z"></path></clipPath>
                 </defs>
-                <ellipse cx="120" cy="262" rx="74" ry="8" fill="#000000" opacity="0.3"></ellipse>
-                <circle class="brasa-light" cx="204" cy="68" r="46" fill="url(#wlGlow)"></circle>
-                <rect x="62" y="232" width="46" height="28" rx="9" fill="#3b4750"></rect>
-                <rect x="132" y="232" width="46" height="28" rx="9" fill="#3b4750"></rect>
-                <path d="M40 152 L38 212" stroke="#55656f" stroke-width="32" stroke-linecap="round" fill="none"></path>
-                <rect x="52" y="128" width="136" height="112" rx="24" fill="#6e7f8c"></rect>
+                <ellipse cx="120" cy="270" rx="56" ry="6" fill="#000000" opacity="0.3"></ellipse>
+                <circle class="brasa-light" cx="212" cy="62" r="48" fill="url(#wlGlow)"></circle>
+                <ellipse class="brasa-light" cx="120" cy="254" rx="16" ry="20" fill="url(#wlGlow)"></ellipse>
+                <path d="M44 162 L40 202" stroke="#a7b3bd" stroke-width="22" stroke-linecap="round" fill="none"></path>
+                <path d="M30 190 H51" stroke="#ffc566" stroke-width="2" stroke-linecap="round"></path>
+                <circle cx="39" cy="214" r="12" fill="#3a4650"></circle>
+                <path d="M62 150 C62 132 80 128 120 128 C160 128 178 132 178 150 C178 196 150 232 120 238 C90 232 62 196 62 150 Z" fill="#a7b3bd"></path>
                 <g clip-path="url(#wlTorso)">
-                  <rect x="52" y="196" width="136" height="48" fill="#5d6d79"></rect>
-                  <path d="M52 196 H188" stroke="#4a5862" stroke-width="3"></path>
+                  <path d="M60 204 Q120 214 180 204 V240 H60 Z" fill="#8795a0"></path>
+                  <ellipse cx="96" cy="142" rx="30" ry="8" fill="#ffffff" opacity="0.22"></ellipse>
                 </g>
-                <path d="M98 222 V182 a22 22 0 0 1 44 0 V222 Z" fill="none" stroke="#3b4750" stroke-width="5" stroke-linejoin="round"></path>
-                <path d="M192 46 a12 12 0 0 1 24 0" fill="none" stroke="#3b4750" stroke-width="4" stroke-linecap="round"></path>
-                <rect x="186" y="44" width="36" height="12" rx="5" fill="#3b4750"></rect>
-                <rect x="188" y="54" width="32" height="38" rx="9" fill="#f5b042"></rect>
-                <rect class="brasa-light" x="196" y="60" width="16" height="26" rx="6" fill="#ffd98a"></rect>
-                <rect x="186" y="86" width="36" height="8" rx="4" fill="#3b4750"></rect>
-                <path d="M192 158 L204 104" stroke="#55656f" stroke-width="32" stroke-linecap="round" fill="none"></path>
+                <path d="M79 203 Q120 212 161 203" stroke="#ffc566" stroke-width="2.5" stroke-linecap="round" fill="none"></path>
+                <path d="M104 192 V172 a16 16 0 0 1 32 0 V192" fill="none" stroke="#ffd98a" stroke-width="3.5" stroke-linecap="round"></path>
+                <path d="M113 192 V177 a7 7 0 0 1 14 0 V192" fill="none" stroke="#ffd98a" stroke-width="3" stroke-linecap="round"></path>
+                <rect x="109" y="235" width="22" height="8" rx="3" fill="#2c3238"></rect>
+                <ellipse cx="120" cy="246" rx="10" ry="2.5" fill="none" stroke="#ffc566" stroke-width="2"></ellipse>
+                <path d="M196 152 L207 112" stroke="#a7b3bd" stroke-width="22" stroke-linecap="round" fill="none"></path>
+                <path d="M192 126 L213 132" stroke="#ffc566" stroke-width="2" stroke-linecap="round"></path>
+                <circle cx="210" cy="100" r="12" fill="#3a4650"></circle>
+                <ellipse cx="212" cy="62" rx="8" ry="25" fill="none" stroke="#c9d2d8" stroke-width="2" transform="rotate(18 212 62)"></ellipse>
+                <circle cx="212" cy="62" r="14" fill="#f5b042"></circle>
+                <circle class="brasa-light" cx="212" cy="62" r="10" fill="#ffe2a8"></circle>
+                <ellipse cx="212" cy="62" rx="24" ry="7" fill="none" stroke="#c9d2d8" stroke-width="2" transform="rotate(-18 212 62)"></ellipse>
+                <path d="M106 124 H134" stroke="#ffc566" stroke-width="3" stroke-linecap="round"></path>
                 <g class="brasa-head">
-                  <path d="M104 62 V50 a16 16 0 0 1 32 0 V62 Z" fill="#55656f"></path>
-                  <rect x="76" y="58" width="88" height="80" rx="24" fill="#8b9ca8"></rect>
-                  <path d="M86 72 l9 11 l-7 9" stroke="#6e7f8c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-                  <rect x="84" y="86" width="72" height="30" rx="15" fill="#161c21"></rect>
+                  <path d="M131 52 L137 31" stroke="#2c3238" stroke-width="3" stroke-linecap="round"></path>
+                  <circle cx="137.5" cy="28" r="5" fill="#ffc566"></circle>
+                  <ellipse cx="120" cy="84" rx="50" ry="35" fill="#b4bfc8"></ellipse>
+                  <ellipse cx="102" cy="60" rx="22" ry="5" fill="#ffffff" opacity="0.25"></ellipse>
+                  <rect x="80" y="66" width="80" height="37" rx="17" fill="#07090b" stroke="#ffc566" stroke-width="1.5"></rect>
                   <g class="brasa-eyes">
                     <g class="brasa-pupils">
-                      <circle cx="106" cy="101" r="8" fill="#f5b042"></circle>
-                      <circle cx="134" cy="101" r="8" fill="#f5b042"></circle>
-                      <circle cx="108.5" cy="98.5" r="2.5" fill="#ffd98a"></circle>
-                      <circle cx="136.5" cy="98.5" r="2.5" fill="#ffd98a"></circle>
+                      <rect x="100" y="75" width="10" height="19" rx="4" fill="#ffd98a"></rect>
+                      <rect x="130" y="75" width="10" height="19" rx="4" fill="#ffd98a"></rect>
                     </g>
                   </g>
                 </g>
@@ -489,42 +495,48 @@
           <div class="brasa-3d" data-brasa3d></div>
           <div class="brasa-wrap">
               <div class="brasa-float">
-                <svg viewBox="0 0 252 280" role="img" aria-label="Brasa acenando com a lanterna acesa">
+                <svg viewBox="0 0 252 280" role="img" aria-label="Brasa erguendo o núcleo de luz">
                   <defs>
                     <radialGradient id="wlGlow2" cx="50%" cy="50%" r="50%">
                       <stop offset="0" stop-color="#f5b042" stop-opacity="0.55"></stop>
                       <stop offset="1" stop-color="#f5b042" stop-opacity="0"></stop>
                     </radialGradient>
-                    <clipPath id="wlTorso2"><rect x="52" y="128" width="136" height="112" rx="24"></rect></clipPath>
+                    <clipPath id="wlTorso2"><path d="M62 150 C62 132 80 128 120 128 C160 128 178 132 178 150 C178 196 150 232 120 238 C90 232 62 196 62 150 Z"></path></clipPath>
                   </defs>
-                  <ellipse cx="120" cy="262" rx="74" ry="8" fill="#000000" opacity="0.3"></ellipse>
-                  <circle class="brasa-light" cx="204" cy="68" r="46" fill="url(#wlGlow2)"></circle>
-                  <rect x="62" y="232" width="46" height="28" rx="9" fill="#3b4750"></rect>
-                  <rect x="132" y="232" width="46" height="28" rx="9" fill="#3b4750"></rect>
-                  <path d="M40 152 L38 212" stroke="#55656f" stroke-width="32" stroke-linecap="round" fill="none"></path>
-                  <rect x="52" y="128" width="136" height="112" rx="24" fill="#6e7f8c"></rect>
+                  <ellipse cx="120" cy="270" rx="56" ry="6" fill="#000000" opacity="0.3"></ellipse>
+                  <circle class="brasa-light" cx="212" cy="62" r="48" fill="url(#wlGlow2)"></circle>
+                  <ellipse class="brasa-light" cx="120" cy="254" rx="16" ry="20" fill="url(#wlGlow2)"></ellipse>
+                  <path d="M44 162 L40 202" stroke="#a7b3bd" stroke-width="22" stroke-linecap="round" fill="none"></path>
+                  <path d="M30 190 H51" stroke="#ffc566" stroke-width="2" stroke-linecap="round"></path>
+                  <circle cx="39" cy="214" r="12" fill="#3a4650"></circle>
+                  <path d="M62 150 C62 132 80 128 120 128 C160 128 178 132 178 150 C178 196 150 232 120 238 C90 232 62 196 62 150 Z" fill="#a7b3bd"></path>
                   <g clip-path="url(#wlTorso2)">
-                    <rect x="52" y="196" width="136" height="48" fill="#5d6d79"></rect>
-                    <path d="M52 196 H188" stroke="#4a5862" stroke-width="3"></path>
+                    <path d="M60 204 Q120 214 180 204 V240 H60 Z" fill="#8795a0"></path>
+                    <ellipse cx="96" cy="142" rx="30" ry="8" fill="#ffffff" opacity="0.22"></ellipse>
                   </g>
-                  <path d="M98 222 V182 a22 22 0 0 1 44 0 V222 Z" fill="none" stroke="#3b4750" stroke-width="5" stroke-linejoin="round"></path>
-                  <path d="M192 46 a12 12 0 0 1 24 0" fill="none" stroke="#3b4750" stroke-width="4" stroke-linecap="round"></path>
-                  <rect x="186" y="44" width="36" height="12" rx="5" fill="#3b4750"></rect>
-                  <rect x="188" y="54" width="32" height="38" rx="9" fill="#f5b042"></rect>
-                  <rect class="brasa-light" x="196" y="60" width="16" height="26" rx="6" fill="#ffd98a"></rect>
-                  <rect x="186" y="86" width="36" height="8" rx="4" fill="#3b4750"></rect>
-                  <path d="M192 158 L204 104" stroke="#55656f" stroke-width="32" stroke-linecap="round" fill="none"></path>
+                  <path d="M79 203 Q120 212 161 203" stroke="#ffc566" stroke-width="2.5" stroke-linecap="round" fill="none"></path>
+                  <path d="M104 192 V172 a16 16 0 0 1 32 0 V192" fill="none" stroke="#ffd98a" stroke-width="3.5" stroke-linecap="round"></path>
+                  <path d="M113 192 V177 a7 7 0 0 1 14 0 V192" fill="none" stroke="#ffd98a" stroke-width="3" stroke-linecap="round"></path>
+                  <rect x="109" y="235" width="22" height="8" rx="3" fill="#2c3238"></rect>
+                  <ellipse cx="120" cy="246" rx="10" ry="2.5" fill="none" stroke="#ffc566" stroke-width="2"></ellipse>
+                  <path d="M196 152 L207 112" stroke="#a7b3bd" stroke-width="22" stroke-linecap="round" fill="none"></path>
+                  <path d="M192 126 L213 132" stroke="#ffc566" stroke-width="2" stroke-linecap="round"></path>
+                  <circle cx="210" cy="100" r="12" fill="#3a4650"></circle>
+                  <ellipse cx="212" cy="62" rx="8" ry="25" fill="none" stroke="#c9d2d8" stroke-width="2" transform="rotate(18 212 62)"></ellipse>
+                  <circle cx="212" cy="62" r="14" fill="#f5b042"></circle>
+                  <circle class="brasa-light" cx="212" cy="62" r="10" fill="#ffe2a8"></circle>
+                  <ellipse cx="212" cy="62" rx="24" ry="7" fill="none" stroke="#c9d2d8" stroke-width="2" transform="rotate(-18 212 62)"></ellipse>
+                  <path d="M106 124 H134" stroke="#ffc566" stroke-width="3" stroke-linecap="round"></path>
                   <g class="brasa-head">
-                    <path d="M104 62 V50 a16 16 0 0 1 32 0 V62 Z" fill="#55656f"></path>
-                    <rect x="76" y="58" width="88" height="80" rx="24" fill="#8b9ca8"></rect>
-                    <path d="M86 72 l9 11 l-7 9" stroke="#6e7f8c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
-                    <rect x="84" y="86" width="72" height="30" rx="15" fill="#161c21"></rect>
+                    <path d="M131 52 L137 31" stroke="#2c3238" stroke-width="3" stroke-linecap="round"></path>
+                    <circle cx="137.5" cy="28" r="5" fill="#ffc566"></circle>
+                    <ellipse cx="120" cy="84" rx="50" ry="35" fill="#b4bfc8"></ellipse>
+                    <ellipse cx="102" cy="60" rx="22" ry="5" fill="#ffffff" opacity="0.25"></ellipse>
+                    <rect x="80" y="66" width="80" height="37" rx="17" fill="#07090b" stroke="#ffc566" stroke-width="1.5"></rect>
                     <g class="brasa-eyes">
                       <g class="brasa-pupils">
-                        <circle cx="106" cy="101" r="8" fill="#f5b042"></circle>
-                        <circle cx="134" cy="101" r="8" fill="#f5b042"></circle>
-                        <circle cx="108.5" cy="98.5" r="2.5" fill="#ffd98a"></circle>
-                        <circle cx="136.5" cy="98.5" r="2.5" fill="#ffd98a"></circle>
+                        <rect x="100" y="75" width="10" height="19" rx="4" fill="#ffd98a"></rect>
+                        <rect x="130" y="75" width="10" height="19" rx="4" fill="#ffd98a"></rect>
                       </g>
                     </g>
                   </g>

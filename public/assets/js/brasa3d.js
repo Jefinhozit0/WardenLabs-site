@@ -74,6 +74,34 @@ function torsoGeometry() {
   return new THREE.LatheGeometry(pts, 64);
 }
 
+// A frente da cabeça é um elipsoide; o visor e os olhos são colocados sobre ele
+const HEAD = { a: 0.552, b: 0.412, c: 0.472 };
+const VISOR = { phi: 0.92, theta: 0.5 };
+function onHead(phi, theta, k = 1) {
+  return new THREE.Vector3(
+    HEAD.a * k * Math.sin(phi) * Math.cos(theta),
+    HEAD.b * k * Math.sin(theta),
+    HEAD.c * k * Math.cos(phi) * Math.cos(theta)
+  );
+}
+// leva um ponto do quadrado [-1,1] para um retângulo de cantos bem arredondados (em ângulos)
+function squircle(u, v) {
+  const m = Math.max(Math.abs(u), Math.abs(v));
+  if (!m) return [0, 0];
+  const n = Math.pow(Math.pow(Math.abs(u), 4) + Math.pow(Math.abs(v), 4), 0.25);
+  return [u * m / n * VISOR.phi, v * m / n * VISOR.theta];
+}
+function visorGeometry(k) {
+  const g = new THREE.PlaneGeometry(2, 2, 64, 32);
+  const pos = g.attributes.position;
+  for (let i = 0; i < pos.count; i++) {
+    const v = onHead(...squircle(pos.getX(i), pos.getY(i)), k);
+    pos.setXYZ(i, v.x, v.y, v.z);
+  }
+  g.computeVertexNormals();
+  return g;
+}
+
 function buildBrasa() {
   const m = materials();
   const root = new THREE.Group();          // flutua
@@ -211,18 +239,21 @@ function buildBrasa() {
   skull.scale.set(1.08, 0.8, 0.92);
   skull.position.y = 0.4;
   head.add(skull);
-  const visor = new THREE.Mesh(new THREE.SphereGeometry(0.5, 64, 32, Math.PI / 2 - 1.05, 2.1, Math.PI / 2 - 0.42, 0.84), m.visor);
-  visor.scale.set(1.1, 0.83, 0.95);
+  // Visor: uma tela de cantos arredondados encaixada na curva da cabeça
+  const visor = new THREE.Mesh(visorGeometry(1), m.visor);
   visor.position.y = 0.4;
   head.add(visor);
-  // contorno de luz em volta do visor
-  const rim = new THREE.Mesh(new THREE.TorusGeometry(0.5, 0.008, 6, 96, 2.1), m.led);
-  rim.rotation.set(Math.PI / 2, 0, Math.PI / 2 - 1.05 + Math.PI);
-  rim.scale.set(1.105, 0.955, 1);
-  for (const dy of [-0.175, 0.175]) {
-    const r = rim.clone(); r.position.y = 0.4 + dy; r.scale.set(1.105 * Math.cos(dy * 2.4), 0.955 * Math.cos(dy * 2.4), 1);
-    head.add(r);
+  // contorno de luz acompanhando a borda da tela
+  const edge = [];
+  for (let i = 0; i < 128; i++) {
+    const a = i / 128 * Math.PI * 2;
+    // anda pela borda do quadrado, que a função leva para a borda arredondada da tela
+    const q = Math.max(Math.abs(Math.cos(a)), Math.abs(Math.sin(a)));
+    edge.push(onHead(...squircle(Math.cos(a) / q, Math.sin(a) / q), 1.004));
   }
+  const rim = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(edge, true), 256, 0.006, 8, true), m.led);
+  rim.position.y = 0.4;
+  head.add(rim);
   // antena fina com a ponta acesa
   const mast = new THREE.Mesh(new THREE.CylinderGeometry(0.014, 0.026, 0.3, 16), m.metal);
   mast.position.set(0.18, 0.9, -0.04);
@@ -236,17 +267,20 @@ function buildBrasa() {
   tipGlow.position.copy(tip.position);
   head.add(tipGlow);
 
-  // Olhos de LED: pílulas deitadas dentro do visor
+  // Olhos de LED: acompanham a curva do visor. O grupo gira em torno do centro da cabeça para olhar.
   const eyes = new THREE.Group();
-  eyes.position.set(0, 0.4, 0.48);
+  eyes.position.set(0, 0.4, 0);
   const eyeL = new THREE.Group(), eyeR = new THREE.Group();
-  for (const [g, x] of [[eyeL, -0.17], [eyeR, 0.17]]) {
-    const led = new THREE.Mesh(rbox(0.17, 0.12, 0.03, 0.055), m.eye);
+  for (const [g, side] of [[eyeL, -1], [eyeR, 1]]) {
+    const phi = side * 0.36;
+    const led = new THREE.Mesh(rbox(0.12, 0.18, 0.02, 0.06), m.eye);
     g.add(led);
     const glow = new THREE.Sprite(m.glow);
-    glow.scale.set(0.42, 0.36, 1);
+    glow.scale.set(0.24, 0.3, 1);
     g.add(glow);
-    g.position.x = x;
+    g.position.copy(onHead(phi, 0, 1.03));
+    // vira o olho para fora, na direção da superfície
+    g.rotation.y = Math.atan2(Math.sin(phi) / HEAD.a, Math.cos(phi) / HEAD.c);
     eyes.add(g);
   }
   head.add(eyes);
@@ -264,7 +298,7 @@ function create(host) {
   const canvas = document.createElement('canvas');
   canvas.className = 'brasa-3d-canvas';
   canvas.setAttribute('role', 'img');
-  canvas.setAttribute('aria-label', 'Brasa, o guardião de pedra da Warden Labs, segurando uma lanterna acesa');
+  canvas.setAttribute('aria-label', 'Brasa, o robô guardião da Warden Labs, erguendo um núcleo de luz');
   host.appendChild(canvas);
 
   let renderer;
@@ -337,9 +371,8 @@ function create(host) {
     b.head.rotation.y = look.x * 0.5;
     b.head.rotation.x = look.y * 0.22;
     b.head.rotation.z = -look.x * 0.06;
-    b.eyes.position.x = look.x * 0.07;
-    b.eyes.position.y = 0.4 - look.y * 0.04;
-    b.eyes.position.z = 0.48;
+    b.eyes.rotation.y = look.x * 0.2;
+    b.eyes.rotation.x = look.y * 0.13;
 
     // Braço da lanterna balança e o fogo tremula
     b.armR.rotation.z = -0.32 + Math.sin(t * 1.6) * 0.045;

@@ -116,7 +116,7 @@ h1, h2, h3, p { margin: 0; }
   position: relative; aspect-ratio: 606 / 666; border-radius: 300px 300px 8px 8px / 260px 260px 8px 8px;
   overflow: hidden; background: #151a1f; isolation: isolate;
 }
-/* Brasa vivo: o golem em SVG do site antigo, dentro do arco */
+/* Brasa vivo: o robô guardião em SVG, dentro do arco */
 .arch.living { background: radial-gradient(ellipse 80% 60% at 50% 78%, #1c242b 0%, #10151a 62%, #0b0e11 100%); }
 .living .beams { position: absolute; inset: 0; pointer-events: none; overflow: hidden; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 30%); mask-image: linear-gradient(to bottom, transparent, #000 30%); }
 .living .beam {
