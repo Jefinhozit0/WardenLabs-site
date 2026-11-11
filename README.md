@@ -12,9 +12,12 @@ public/            ← tudo que vai para o ar
   robots.txt
   _headers         ← cabeçalhos de segurança e cache (lido pelo Cloudflare Pages)
   _redirects       ← /n1-portal antigo → /portal-de-processos/
-  assets/css/styles.css
-  assets/js/main.js
+  assets/css/site.css  ← estilos de todas as páginas
+  assets/js/site.js    ← menu, rolagem guiada, perguntas e animações
+  assets/js/brasa3d.js ← o Brasa em 3D (Three.js); sem WebGL, o Brasa em SVG aparece no lugar
+  assets/vendor/       ← Three.js r160 (cópia local, porque o site só aceita scripts do próprio domínio)
   assets/img/favicon.svg
+  assets/img/home/     ← Brasa e lanterna, recortados do vídeo do novo design
   assets/img/portal/   ← telas do sistema e logo, recortadas do vídeo de apresentação
   assets/img/landing/  ← screenshots da landing page da Abarth Automotiva
   assets/media/        ← vídeo de apresentação do Portal de Processos
@@ -23,7 +26,7 @@ public/            ← tudo que vai para o ar
 ## Atualizar o site
 
 1. Edite os arquivos dentro de `public/`. Se mexer no CSS ou no JS, aumente o número em
-   `styles.css?v=7` / `main.js?v=7` nos quatro HTML (index, landing-pages, portal-de-processos e 404).
+   `site.css?v=10` / `site.js?v=9` nos quatro HTML (index, landing-pages, portal-de-processos e 404).
 2. Em dash.cloudflare.com › Workers & Pages › **wardenlabs** › **Create deployment**,
    arraste a pasta `public` e clique em **Deploy**.
 

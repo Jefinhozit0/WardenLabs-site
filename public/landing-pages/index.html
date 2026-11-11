@@ -16,12 +16,14 @@
   <meta property="og:image" content="/assets/img/landing/abarth-desktop-hero.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/icon-192.png?v=2" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=7">
-  <script src="/assets/js/main.js?v=7" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/assets/css/site.css?v=10">
+  <script src="/assets/js/site.js?v=9" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -29,248 +31,294 @@
 <header class="site-header" id="cabecalho">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Warden Labs, início">
-      <svg width="32" height="32" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M12 56 V28 a20 20 0 0 1 40 0 V56 Z" fill="none" stroke="#f5b042" stroke-width="6" stroke-linejoin="round"></path>
-        <circle cx="32" cy="40" r="6" fill="#f5b042"></circle>
-      </svg>
-      <span class="brand-name">Warden Labs</span>
+      <svg width="34" height="24" viewBox="0 0 34 24" aria-hidden="true"><path d="M3 5 L9 20 L13.5 10 L17 18 L20.5 10 L25 20 L31 5" fill="none" stroke="#f5b042" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round"></path><path d="M3 5 L9 20 L13.5 10" fill="none" stroke="#ffd98a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" transform="translate(1.6 -1.4)"></path></svg>
+      <span class="brand-word">
+        <span class="brand-name"><b>warden</b><span>labs</span></span>
+        <span class="brand-tag">Tecnologia com propósito</span>
+      </span>
     </a>
     <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="m-top" d="M3 5 H17"></path><path class="m-mid" d="M3 10 H17"></path><path class="m-bot" d="M3 15 H17"></path></svg>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6 H17 M3 14 H17"></path></svg>
     </button>
     <nav class="nav" id="nav" aria-label="Principal">
-      <a class="nav-link active" href="/landing-pages/" aria-current="page">Landing pages</a>
-      <a class="nav-link" href="/portal-de-processos/">Portal de Processos</a>
-      <a class="nav-link" href="/#planos">Planos</a>
-      <a class="nav-link" href="/#como-funciona">Como funciona</a>
-      <a class="btn btn-primary btn-sm" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20landing%20page%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero a minha página</a>
+      <a class="nav-link" href="/#o-que-fazemos">O que fazemos</a>
+      <a class="nav-link" href="/landing-pages/" aria-current="page">Landing pages</a>
+      <a class="nav-link" href="/portal-de-processos/">Nosso produto</a>
+      <a class="nav-link" href="/#como-trabalhamos">Como trabalhamos</a>
+      <a class="btn btn-dark btn-sm" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20landing%20page%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">
+        Quero a minha página
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg>
+      </a>
     </nav>
   </div>
 </header>
 
 <main id="conteudo">
   <!-- Herói -->
-  <section class="pp-hero">
+  <section class="page-hero">
     <div class="wrap">
-      <div class="hero-copy">
-        <p class="eyebrow in">Plano Sentinela · Sites e landing pages</p>
-        <h1 class="h1 in in-1">Uma página que <em>traz cliente</em> enquanto você trabalha.</h1>
-        <p class="lead in in-2">Landing page sob medida para negócios locais: rápida, pronta para celular e feita para levar o cliente direto ao seu WhatsApp. No ar em dias, e com a Warden Labs de guarda depois.</p>
-        <div class="actions in in-3">
-          <a class="btn btn-primary" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20landing%20page%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">
-            Quero a minha página
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12 H19 M13 6 L19 12 L13 18"></path></svg>
-          </a>
-          <a class="btn btn-ghost" href="#exemplo">Ver o exemplo</a>
+      <div class="page-hero-grid">
+        <div>
+          <p class="hero-eyebrow mono rise" style="--i: 0;"><span class="dot"></span>Sentinela / Sites e landing pages</p>
+          <h1 class="display rise" style="--i: 1;">Uma página que traz cliente <span class="serif">enquanto você trabalha.</span></h1>
+          <p class="hero-lead rise" style="--i: 2;">Landing page sob medida para negócios locais: rápida, pronta para celular e feita para levar o cliente direto ao seu WhatsApp. No ar em dias, e com a Warden Labs de guarda depois.</p>
+          <div class="hero-actions rise" style="--i: 3;">
+            <a class="btn btn-dark" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20landing%20page%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">
+              Quero a minha página
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="arrow-link" href="#exemplo">
+              Ver o exemplo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 V20 M6 14 L12 20 L18 14"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-media rise" style="--i: 2;">
+          <div class="frame">
+            <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>abarth.pages.dev</span></div>
+            <img src="/assets/img/landing/abarth-desktop-hero.jpg" alt="Landing page da Abarth Automotiva no computador, com a chamada principal e os botões de agendamento e WhatsApp" width="1280" height="900" fetchpriority="high">
+          </div>
+          <div class="phone"><img src="/assets/img/landing/abarth-mobile-hero.jpg" alt="A mesma landing page aberta no celular" width="488" height="963"></div>
         </div>
       </div>
-      <div class="showcase in in-2">
-        <img class="shot shot-framed" src="/assets/img/landing/abarth-desktop-hero.jpg" alt="Landing page da Abarth Automotiva no computador, com a chamada principal e os botões de agendamento e WhatsApp" width="1280" height="900">
-        <img class="shot shot-phone shot-framed" src="/assets/img/landing/abarth-mobile-hero.jpg" alt="A mesma landing page aberta no celular" width="488" height="963">
+      <div class="hero-foot mono">
+        <span>Sob medida. Pronta para celular. No ar em dias.</span>
+        <span>Role para descobrir <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 V20 M6 14 L12 20 L18 14"></path></svg></span>
       </div>
     </div>
   </section>
 
-  <!-- Antes e depois -->
-  <section class="section tight band">
+  <!-- 01 Antes e depois -->
+  <section class="section">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2 class="h2">O que muda com uma página própria</h2>
+        <div>
+          <p class="kicker mono"><span class="n">01 /</span>O que muda</p>
+          <h2 class="display">Uma página própria.<br>Um negócio <span class="serif">mais fácil de achar.</span></h2>
+        </div>
+        <p style="justify-self: end;">O cliente procura, encontra, entende o que você faz e chama. Sem ida e volta no direct.</p>
       </div>
-      <dl class="swap reveal">
-        <div class="swap-head" aria-hidden="true"><span>Hoje</span><span>Com a página</span></div>
-        <div><dt>Só um perfil no Instagram</dt><dd>Um endereço seu, que aparece no Google e passa confiança.</dd></div>
-        <div><dt>Site antigo que não abre no celular</dt><dd>Feita primeiro para o celular, onde o seu cliente está.</dd></div>
-        <div><dt>Orçamento que se perde nas mensagens</dt><dd>O formulário chega no seu WhatsApp já com nome, serviço e horário.</dd></div>
-        <div><dt>Cliente perguntando preço e horário</dt><dd>Serviços, valores, mapa e horário de funcionamento na mesma página.</dd></div>
-      </dl>
+      <div class="compare reveal">
+        <div class="compare-col before">
+          <p class="mono">Hoje</p>
+          <ol>
+            <li>Só um perfil no Instagram</li>
+            <li>Site antigo que não abre no celular</li>
+            <li>Orçamento que se perde nas mensagens</li>
+            <li>Cliente perguntando preço e horário</li>
+          </ol>
+        </div>
+        <div class="compare-col after">
+          <p class="mono">Com a página</p>
+          <ol>
+            <li>Um endereço seu, que aparece no Google e passa confiança.</li>
+            <li>Feita primeiro para o celular, onde o seu cliente está.</li>
+            <li>O formulário chega no seu WhatsApp já com nome, serviço e horário.</li>
+            <li>Serviços, valores, mapa e horário de funcionamento na mesma página.</li>
+          </ol>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Exemplo real -->
+  <!-- 02 Exemplo real -->
   <section class="section" id="exemplo">
     <div class="wrap">
-      <div class="section-head side reveal">
-        <h2 class="h2">Exemplo: a página da Abarth Automotiva</h2>
-        <p class="lead">Cada parte da página tem uma função: mostrar quem você é, responder as dúvidas e levar o cliente para a conversa.</p>
+      <div class="section-head reveal">
+        <div>
+          <p class="kicker mono"><span class="n">02 /</span>Exemplo real</p>
+          <h2 class="display">A página da<br><span class="serif">Abarth Automotiva.</span></h2>
+        </div>
+        <p style="justify-self: end;">Cada parte da página tem uma função: mostrar quem você é, responder as dúvidas e levar o cliente para a conversa.</p>
       </div>
       <div class="tour">
         <div class="tour-row">
           <div class="tour-copy reveal">
-            <p class="eyebrow">Primeira impressão</p>
-            <h3 class="h3">Em três segundos, o cliente entende o que você faz</h3>
-            <ul class="list">
+            <p class="mono">01 / Primeira impressão</p>
+            <h3 class="display">Em três segundos, o cliente <span class="serif">entende o que você faz.</span></h3>
+            <ul class="ticks">
               <li>A proposta do negócio em uma frase</li>
               <li>Botões para agendar e para chamar no WhatsApp</li>
               <li>Números e diferenciais que passam confiança</li>
             </ul>
           </div>
-          <div class="tour-media reveal">
-            <img class="shot shot-framed" src="/assets/img/landing/abarth-desktop-hero.jpg" alt="Topo da página da Abarth com título, botões e números de destaque" width="1280" height="900" loading="lazy">
+          <div class="frame reveal">
+            <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Topo da página</span></div>
+            <img src="/assets/img/landing/abarth-desktop-hero.jpg" alt="Topo da página da Abarth com título, botões e números de destaque" width="1280" height="900" loading="lazy">
           </div>
         </div>
         <div class="tour-row">
           <div class="tour-copy reveal">
-            <p class="eyebrow">Serviços</p>
-            <h3 class="h3">Preço e prazo antes da primeira mensagem</h3>
-            <ul class="list">
+            <p class="mono">02 / Serviços</p>
+            <h3 class="display">Preço e prazo <span class="serif">antes da primeira mensagem.</span></h3>
+            <ul class="ticks">
               <li>Cada serviço com o que está incluso</li>
               <li>Valor inicial e tempo estimado</li>
               <li>Botão que já abre a conversa com o serviço escolhido</li>
             </ul>
           </div>
-          <div class="tour-media reveal">
-            <img class="shot shot-framed" src="/assets/img/landing/abarth-desktop-modal.jpg" alt="Detalhes do serviço Revisão Completa com itens inclusos, preço e tempo estimado" width="1280" height="900" loading="lazy">
+          <div class="frame reveal">
+            <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Detalhe do serviço</span></div>
+            <img src="/assets/img/landing/abarth-desktop-modal.jpg" alt="Detalhes do serviço Revisão Completa com itens inclusos, preço e tempo estimado" width="1280" height="900" loading="lazy">
           </div>
         </div>
         <div class="tour-row">
           <div class="tour-copy reveal">
-            <p class="eyebrow">Agendamento</p>
-            <h3 class="h3">O pedido chega pronto no seu WhatsApp</h3>
-            <ul class="list">
+            <p class="mono">03 / Agendamento</p>
+            <h3 class="display">O pedido chega <span class="serif">pronto no seu WhatsApp.</span></h3>
+            <ul class="ticks">
               <li>O cliente preenche nome, veículo, serviço e horário</li>
               <li>A mensagem chega montada, sem ida e volta</li>
               <li>Botão de WhatsApp sempre à mão, em qualquer parte da página</li>
             </ul>
           </div>
-          <div class="tour-media phones reveal">
-            <img class="shot shot-framed" src="/assets/img/landing/abarth-mobile-servicos.jpg" alt="Lista de serviços da Abarth no celular" width="488" height="963" loading="lazy">
-            <img class="shot shot-framed" src="/assets/img/landing/abarth-mobile-agendamento.jpg" alt="Formulário de agendamento no celular" width="488" height="963" loading="lazy">
+          <div class="phones reveal">
+            <div class="phone"><img src="/assets/img/landing/abarth-mobile-servicos.jpg" alt="Lista de serviços da Abarth no celular" width="488" height="963" loading="lazy"></div>
+            <div class="phone"><img src="/assets/img/landing/abarth-mobile-agendamento.jpg" alt="Formulário de agendamento no celular" width="488" height="963" loading="lazy"></div>
           </div>
         </div>
         <div class="tour-row">
           <div class="tour-copy reveal">
-            <p class="eyebrow">Confiança</p>
-            <h3 class="h3">Mostre a casa antes do cliente chegar</h3>
-            <ul class="list">
+            <p class="mono">04 / Confiança</p>
+            <h3 class="display">Mostre a casa <span class="serif">antes do cliente chegar.</span></h3>
+            <ul class="ticks">
               <li>Galeria com fotos da estrutura e da equipe</li>
               <li>Avaliações de clientes reais</li>
               <li>Perguntas frequentes, mapa e horário de funcionamento</li>
             </ul>
           </div>
-          <div class="tour-media reveal">
-            <img class="shot shot-framed" src="/assets/img/landing/abarth-desktop-galeria.jpg" alt="Galeria de fotos da oficina em mosaico" width="1280" height="900" loading="lazy">
+          <div class="frame reveal">
+            <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Galeria</span></div>
+            <img src="/assets/img/landing/abarth-desktop-galeria.jpg" alt="Galeria de fotos da oficina em mosaico" width="1280" height="900" loading="lazy">
           </div>
         </div>
       </div>
-      <div class="actions reveal">
-        <a class="btn btn-ghost" href="https://abarth.pages.dev/" target="_blank" rel="noopener">
+      <div class="tour-more reveal">
+        <a class="arrow-link" href="https://abarth.pages.dev/" target="_blank" rel="noopener">
           Abrir o exemplo ao vivo
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M9 7 H17 V15"></path></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- O que vem na página -->
+  <!-- 03 O que vem na página -->
   <section class="section band">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2 class="h2">O que vem na página</h2>
+        <div>
+          <p class="kicker mono"><span class="n">03 /</span>O que vem na página</p>
+          <h2 class="display">Tudo o que o cliente precisa.<br><span class="serif">Nada que atrapalhe.</span></h2>
+        </div>
       </div>
-      <div class="features three">
-        <article class="feature reveal">
-          <h3>Com a sua marca</h3>
-          <p class="muted">Cores, logo, fotos e textos do seu negócio, montados para ele.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Pronta para celular</h3>
-          <p class="muted">Pensada primeiro para a tela pequena, onde a maioria dos clientes chega.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Rápida</h3>
-          <p class="muted">Abre em poucos segundos, mesmo no 4G.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Fácil de achar</h3>
-          <p class="muted">Título, descrição e prévia certos para o Google e para links no WhatsApp.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Contato no WhatsApp</h3>
-          <p class="muted">Botões e formulário que abrem a conversa com a mensagem já escrita.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Domínio e publicação</h3>
-          <p class="muted">A gente cuida do endereço, da hospedagem e de colocar no ar.</p>
-        </article>
+      <div class="grid-cards">
+        <article class="g-card reveal"><p class="mono">01</p><h3>Com a sua marca</h3><p>Cores, logo, fotos e textos do seu negócio, montados para ele.</p></article>
+        <article class="g-card reveal"><p class="mono">02</p><h3>Pronta para celular</h3><p>Pensada primeiro para a tela pequena, onde a maioria dos clientes chega.</p></article>
+        <article class="g-card reveal"><p class="mono">03</p><h3>Rápida</h3><p>Abre em poucos segundos, mesmo no 4G.</p></article>
+        <article class="g-card reveal"><p class="mono">04</p><h3>Fácil de achar</h3><p>Título, descrição e prévia certos para o Google e para links no WhatsApp.</p></article>
+        <article class="g-card reveal"><p class="mono">05</p><h3>Contato no WhatsApp</h3><p>Botões e formulário que abrem a conversa com a mensagem já escrita.</p></article>
+        <article class="g-card reveal"><p class="mono">06</p><h3>Domínio e publicação</h3><p>A gente cuida do endereço, da hospedagem e de colocar no ar.</p></article>
       </div>
-      <p class="note reveal">Serve para oficinas, clínicas, salões, escritórios, lojas e qualquer negócio que atende pelo WhatsApp.</p>
+      <p class="cards-note reveal"><span class="dot"></span>Serve para oficinas, clínicas, salões, escritórios, lojas e qualquer negócio que atende pelo WhatsApp.</p>
     </div>
   </section>
 
-  <!-- Como funciona -->
+  <!-- 04 Como fica pronta -->
   <section class="section">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2 class="h2">Como a página fica pronta</h2>
+        <div>
+          <p class="kicker mono"><span class="n">04 /</span>Como fica pronta</p>
+          <h2 class="display">Da conversa<br>ao <span class="serif">link no ar.</span></h2>
+        </div>
+        <p style="justify-self: end;">Você conta o que faz e manda o material. A gente monta, ajusta com você e publica.</p>
       </div>
-      <ol class="steps">
-        <li class="step reveal">
-          <span class="step-num">01</span>
-          <h3>Conversa</h3>
-          <p class="muted">Uma conversa curta para entender o seu negócio e o que o cliente precisa ver.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step-num">02</span>
-          <h3>Conteúdo</h3>
-          <p class="muted">Você manda fotos, serviços e preços. A gente organiza e escreve os textos.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step-num">03</span>
-          <h3>Primeira versão</h3>
-          <p class="muted">Em dias, num link para você abrir no celular e pedir ajustes.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step-num">04</span>
-          <h3>No ar, e de guarda</h3>
-          <p class="muted">Publicamos no seu domínio e seguimos com os ajustes depois do lançamento.</p>
-        </li>
+      <ol class="steps steps-static reveal">
+        <li class="step"><span class="step-num">01</span><h3>Conversa</h3><p>Uma conversa curta para entender o seu negócio e o que o cliente precisa ver.</p></li>
+        <li class="step"><span class="step-num">02</span><h3>Conteúdo</h3><p>Você manda fotos, serviços e preços. A gente organiza e escreve os textos.</p></li>
+        <li class="step"><span class="step-num">03</span><h3>Primeira versão</h3><p>Em dias, num link para você abrir no celular e pedir ajustes.</p></li>
+        <li class="step"><span class="step-num">04</span><h3>No ar, e de guarda</h3><p>Publicamos no seu domínio e seguimos com os ajustes depois do lançamento.</p></li>
       </ol>
     </div>
   </section>
 
-  <!-- Perguntas -->
-  <section class="section band">
+  <!-- 05 Perguntas -->
+  <section class="section faq" id="perguntas">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2 class="h2">Perguntas frequentes</h2>
+        <div>
+          <p class="kicker mono"><span class="n">05 /</span>Perguntas frequentes</p>
+          <h2 class="display">Antes de<br>começar <span class="serif">a sua.</span></h2>
+        </div>
+        <aside>
+          <p>O que mais perguntam sobre a página. Escolha o que quer saber.</p>
+          <a class="arrow-link" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Tenho%20uma%20pergunta%20sobre%20landing%20pages." target="_blank" rel="noopener">Prefere uma conversa? <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
+        </aside>
       </div>
-      <div class="faq reveal">
-        <details>
-          <summary>Preciso ter um domínio?</summary>
-          <p>Não. A gente ajuda a registrar o seu (como seunegocio.com.br) e cuida da configuração. Enquanto isso, a página pode ficar num endereço provisório.</p>
-        </details>
-        <details>
-          <summary>Só funciona para oficina?</summary>
-          <p>Não. A Abarth é um exemplo. A estrutura se adapta a clínicas, salões, escritórios, lojas e prestadores de serviço, sempre com a sua marca e o seu conteúdo.</p>
-        </details>
-        <details>
-          <summary>Quanto tempo leva?</summary>
-          <p>A primeira versão fica pronta em dias, depois que recebemos fotos, serviços e informações de contato. O prazo exato vai na proposta.</p>
-        </details>
-        <details>
-          <summary>Consigo mudar preço e texto depois?</summary>
-          <p>Sim. Os ajustes depois do lançamento fazem parte do plano: você pede pelo WhatsApp e a gente atualiza.</p>
-        </details>
-        <details>
-          <summary>E se eu quiser automatizar o atendimento depois?</summary>
-          <p>A página é o primeiro degrau. Quando fizer sentido, ela pode ganhar automações no plano Guardião, como confirmação de agendamento e lembretes pelo WhatsApp.</p>
-        </details>
+      <div class="faq-box reveal">
+        <div class="faq-list">
+          <p class="mono">O que passa pela sua cabeça?</p>
+          <div role="tablist" aria-label="Perguntas frequentes" aria-orientation="vertical">
+            <button class="q" type="button" role="tab" id="q-0" aria-controls="a-0" aria-selected="true"><span class="n">01</span>Preciso ter um domínio?<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></button>
+            <button class="q" type="button" role="tab" id="q-1" aria-controls="a-1" aria-selected="false"><span class="n">02</span>Só funciona para oficina?<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></button>
+            <button class="q" type="button" role="tab" id="q-2" aria-controls="a-2" aria-selected="false"><span class="n">03</span>Quanto tempo leva?<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></button>
+            <button class="q" type="button" role="tab" id="q-3" aria-controls="a-3" aria-selected="false"><span class="n">04</span>Consigo mudar preço e texto depois?<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></button>
+            <button class="q" type="button" role="tab" id="q-4" aria-controls="a-4" aria-selected="false"><span class="n">05</span>E se eu quiser automatizar o atendimento depois?<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></button>
+          </div>
+          <p class="foot">Sem complicar.<br>Desde a primeira resposta.</p>
+        </div>
+        <div class="faq-panels">
+          <div class="answer" id="a-0" role="tabpanel" aria-labelledby="q-0">
+            <div class="answer-top"><span class="mono">01 / Domínio</span><svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 25 V11 a8 8 0 0 1 16 0 V25 M8 25 V12 a4 4 0 0 1 8 0 V25 M2 25 H22"></path><circle cx="12" cy="18" r="1" fill="currentColor"></circle></svg></div>
+            <h3>Preciso ter um domínio?</h3>
+            <p>Não. A gente ajuda a registrar o seu (como seunegocio.com.br) e cuida da configuração. Enquanto isso, a página pode ficar num endereço provisório.</p>
+            <a class="arrow-link" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20landing%20page%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero a minha página <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
+          </div>
+          <div class="answer" id="a-1" role="tabpanel" aria-labelledby="q-1" hidden>
+            <div class="answer-top"><span class="mono">02 / Segmentos</span><svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 25 V11 a8 8 0 0 1 16 0 V25 M8 25 V12 a4 4 0 0 1 8 0 V25 M2 25 H22"></path><circle cx="12" cy="18" r="1" fill="currentColor"></circle></svg></div>
+            <h3>Só funciona para oficina?</h3>
+            <p>Não. A Abarth é um exemplo. A estrutura se adapta a clínicas, salões, escritórios, lojas e prestadores de serviço, sempre com a sua marca e o seu conteúdo.</p>
+            <a class="arrow-link" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20landing%20page%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero a minha página <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
+          </div>
+          <div class="answer" id="a-2" role="tabpanel" aria-labelledby="q-2" hidden>
+            <div class="answer-top"><span class="mono">03 / Prazo</span><svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 25 V11 a8 8 0 0 1 16 0 V25 M8 25 V12 a4 4 0 0 1 8 0 V25 M2 25 H22"></path><circle cx="12" cy="18" r="1" fill="currentColor"></circle></svg></div>
+            <h3>Quanto tempo leva?</h3>
+            <p>A primeira versão fica pronta em dias, depois que recebemos fotos, serviços e informações de contato. O prazo exato vai na proposta.</p>
+            <a class="arrow-link" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20landing%20page%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero a minha página <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
+          </div>
+          <div class="answer" id="a-3" role="tabpanel" aria-labelledby="q-3" hidden>
+            <div class="answer-top"><span class="mono">04 / Ajustes</span><svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 25 V11 a8 8 0 0 1 16 0 V25 M8 25 V12 a4 4 0 0 1 8 0 V25 M2 25 H22"></path><circle cx="12" cy="18" r="1" fill="currentColor"></circle></svg></div>
+            <h3>Consigo mudar preço e texto depois?</h3>
+            <p>Sim. Os ajustes depois do lançamento fazem parte do plano: você pede pelo WhatsApp e a gente atualiza.</p>
+            <a class="arrow-link" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20landing%20page%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero a minha página <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
+          </div>
+          <div class="answer" id="a-4" role="tabpanel" aria-labelledby="q-4" hidden>
+            <div class="answer-top"><span class="mono">05 / Próximo degrau</span><svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 25 V11 a8 8 0 0 1 16 0 V25 M8 25 V12 a4 4 0 0 1 8 0 V25 M2 25 H22"></path><circle cx="12" cy="18" r="1" fill="currentColor"></circle></svg></div>
+            <h3>E se eu quiser automatizar o atendimento depois?</h3>
+            <p>A página é o primeiro degrau. Quando fizer sentido, ela pode ganhar automações no plano Guardião, como confirmação de agendamento e lembretes pelo WhatsApp.</p>
+            <a class="arrow-link" href="/#o-que-fazemos">Conhecer o Guardião <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contato -->
-  <section class="section contact">
+  <!-- Chamada final -->
+  <section class="cta" id="contato">
     <div class="wrap">
-      <h2 class="h2 reveal">Quer uma página assim para o seu negócio?</h2>
-      <p class="lead reveal">Chama no WhatsApp e conta o que você faz. Depois da conversa, a gente manda a proposta com o valor.</p>
-      <div class="actions reveal">
-        <a class="btn btn-primary" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20landing%20page%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">
-          Quero a minha página
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12 H19 M13 6 L19 12 L13 18"></path></svg>
+      <div class="cta-top mono">
+        <span>A sua página começa com um oi.</span>
+        <svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 25 V11 a8 8 0 0 1 16 0 V25 M8 25 V12 a4 4 0 0 1 8 0 V25 M2 25 H22"></path><circle cx="12" cy="18" r="1" fill="currentColor"></circle></svg>
+      </div>
+      <div class="cta-main">
+        <h2 class="display reveal">Quer uma página<br>assim <span class="serif">para você?</span></h2>
+        <a class="cta-circle" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20landing%20page%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener" aria-label="Pedir a minha página no WhatsApp">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 L18 6 M8 6 H18 V16"></path></svg>
         </a>
-        <a class="btn btn-ghost" href="/#planos">Comparar os planos</a>
+      </div>
+      <div class="cta-foot">
+        <p>Chama no WhatsApp e conta o que você faz.<br>Depois da conversa, a gente manda a proposta com o valor.</p>
+        <a class="arrow-link" href="/#o-que-fazemos">Comparar com os outros planos <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
       </div>
     </div>
   </section>
@@ -278,15 +326,26 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <div class="footer-brand">
-      <svg width="24" height="24" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M12 56 V28 a20 20 0 0 1 40 0 V56 Z" fill="none" stroke="#f5b042" stroke-width="6" stroke-linejoin="round"></path>
-        <circle cx="32" cy="40" r="6" fill="#f5b042"></circle>
-      </svg>
-      <span class="brand-name">Warden Labs</span>
-      <span class="muted footer-tag">Guardiões da sua operação.</span>
+    <div class="footer-top">
+      <a class="brand" href="/" aria-label="Warden Labs, voltar ao início">
+        <svg width="34" height="24" viewBox="0 0 34 24" aria-hidden="true"><path d="M3 5 L9 20 L13.5 10 L17 18 L20.5 10 L25 20 L31 5" fill="none" stroke="#f5b042" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round"></path></svg>
+        <span class="brand-word">
+          <span class="brand-name"><b>warden</b><span>labs</span></span>
+          <span class="brand-tag">Tecnologia com propósito</span>
+        </span>
+      </a>
+      <p>Tecnologia que abre caminhos.<br>Gente que segue com você.</p>
+      <div class="footer-contact">
+        <a href="mailto:jefinhozit00@icloud.com">jefinhozit00@icloud.com <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M9 7 H17 V15"></path></svg></a>
+        <a href="https://wa.me/5511954358162" target="_blank" rel="noopener">+55 (11) 95435-8162 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M9 7 H17 V15"></path></svg></a>
+      </div>
     </div>
-    <span class="muted footer-copy">© 2026 Warden Labs</span>
+    <p class="wordmark" aria-hidden="true"><b>warden</b><span>labs</span><sup></sup></p>
+    <div class="footer-bottom">
+      <span>© 2026 Warden Labs</span>
+      <span>FEITO COM INTENÇÃO. MANTIDO COM CUIDADO.</span>
+      <a href="#cabecalho">VOLTAR AO TOPO <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20 V4 M6 10 L12 4 L18 10"></path></svg></a>
+    </div>
   </div>
 </footer>
 

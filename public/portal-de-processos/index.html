@@ -11,17 +11,19 @@
   <meta property="og:type" content="product">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Warden Labs">
-  <meta property="og:title" content="Portal de Processos · Tudo isso em um sistema só">
+  <meta property="og:title" content="Portal de Processos · Tudo no lugar. Você no comando.">
   <meta property="og:description" content="Clientes, processos, atendimento e vendas em um painel só. O cliente acompanha o processo pelo celular, sem precisar ligar.">
   <meta property="og:image" content="/assets/img/portal/painel.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="/assets/img/portal/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/icon-192.png?v=2" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=7">
-  <script src="/assets/js/main.js?v=7" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/assets/css/site.css?v=10">
+  <script src="/assets/js/site.js?v=9" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -29,259 +31,304 @@
 <header class="site-header" id="cabecalho">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Warden Labs, início">
-      <svg width="32" height="32" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M12 56 V28 a20 20 0 0 1 40 0 V56 Z" fill="none" stroke="#f5b042" stroke-width="6" stroke-linejoin="round"></path>
-        <circle cx="32" cy="40" r="6" fill="#f5b042"></circle>
-      </svg>
-      <span class="brand-name">Warden Labs</span>
+      <svg width="34" height="24" viewBox="0 0 34 24" aria-hidden="true"><path d="M3 5 L9 20 L13.5 10 L17 18 L20.5 10 L25 20 L31 5" fill="none" stroke="#f5b042" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round"></path><path d="M3 5 L9 20 L13.5 10" fill="none" stroke="#ffd98a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" transform="translate(1.6 -1.4)"></path></svg>
+      <span class="brand-word">
+        <span class="brand-name"><b>warden</b><span>labs</span></span>
+        <span class="brand-tag">Tecnologia com propósito</span>
+      </span>
     </a>
     <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="m-top" d="M3 5 H17"></path><path class="m-mid" d="M3 10 H17"></path><path class="m-bot" d="M3 15 H17"></path></svg>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6 H17 M3 14 H17"></path></svg>
     </button>
     <nav class="nav" id="nav" aria-label="Principal">
+      <a class="nav-link" href="/#o-que-fazemos">O que fazemos</a>
       <a class="nav-link" href="/landing-pages/">Landing pages</a>
-      <a class="nav-link active" href="/portal-de-processos/" aria-current="page">Portal de Processos</a>
-      <a class="nav-link" href="/#planos">Planos</a>
-      <a class="nav-link" href="/#como-funciona">Como funciona</a>
-      <a class="nav-link" href="/#guarda">Guarda contínua</a>
-      <a class="btn btn-primary btn-sm" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Portal%20de%20Processos." target="_blank" rel="noopener">Pedir demonstração</a>
+      <a class="nav-link" href="/portal-de-processos/" aria-current="page">Nosso produto</a>
+      <a class="nav-link" href="/#como-trabalhamos">Como trabalhamos</a>
+      <a class="btn btn-dark btn-sm" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Portal%20de%20Processos." target="_blank" rel="noopener">
+        Pedir demonstração
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg>
+      </a>
     </nav>
   </div>
 </header>
 
 <main id="conteudo">
-  <!-- Herói do produto -->
-  <section class="pp-hero">
+  <!-- Herói -->
+  <section class="page-hero">
     <div class="wrap">
-      <div class="hero-copy">
-        <p class="eyebrow in">Produto Warden Labs</p>
-        <h1 class="h1 in in-1 product-name"><img src="/assets/img/portal/logo.svg" alt="" width="56" height="56">Portal de Processos</h1>
-        <p class="lead in in-2">Gestão de clientes, processos, atendimento e vendas, com um portal para o seu cliente acompanhar tudo. Hoje ele roda na N1 Soluções: a equipe trabalha em um painel só e o cliente acompanha o processo pelo celular.</p>
-        <div class="actions in in-3">
-          <a class="btn btn-primary" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Portal%20de%20Processos." target="_blank" rel="noopener">
-            Agendar demonstração
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12 H19 M13 6 L19 12 L13 18"></path></svg>
-          </a>
-          <a class="btn btn-ghost" href="#telas">Ver as telas</a>
+      <div class="page-hero-grid">
+        <div>
+          <p class="hero-eyebrow mono rise" style="--i: 0;"><span class="product-badge"><img src="/assets/img/portal/logo.svg" alt="" width="28" height="28">Portal de Processos · Produto Warden Labs</span></p>
+          <h1 class="display rise" style="--i: 1;">Tudo no lugar.<br>Você no <span class="serif">comando.</span></h1>
+          <p class="hero-lead rise" style="--i: 2;">Gestão de clientes, processos, atendimento e vendas, com um portal para o seu cliente acompanhar tudo. Hoje ele roda na N1 Soluções: a equipe trabalha em um painel só e o cliente acompanha o processo pelo celular.</p>
+          <div class="hero-actions rise" style="--i: 3;">
+            <a class="btn btn-dark" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Portal%20de%20Processos." target="_blank" rel="noopener">
+              Agendar demonstração
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg>
+            </a>
+            <a class="arrow-link" href="#telas">
+              Ver as telas
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 V20 M6 14 L12 20 L18 14"></path></svg>
+            </a>
+          </div>
+          <div class="n1 rise" style="--i: 4;">
+            <span>Uma solução em uso.<br>Um produto em evolução.</span>
+          </div>
+        </div>
+        <div class="hero-media rise" style="--i: 2;">
+          <div class="frame">
+            <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Visão geral da equipe</span></div>
+            <img src="/assets/img/portal/painel.jpg" alt="Painel do Portal de Processos com clientes ativos, pendências, pontos de atenção e atividade recente" width="1114" height="784" fetchpriority="high">
+          </div>
+          <div class="phone"><img src="/assets/img/portal/app-processo.jpg" alt="Área do cliente no celular mostrando o andamento do processo" width="478" height="944"></div>
         </div>
       </div>
-      <div class="showcase in in-2">
-        <img class="shot" src="/assets/img/portal/painel.jpg" alt="Painel do Portal de Processos com clientes ativos, pendências, pontos de atenção e atividade recente" width="1114" height="784">
-        <img class="shot shot-phone" src="/assets/img/portal/app-processo.jpg" alt="Área do cliente no celular mostrando o andamento do processo" width="478" height="944">
+      <div class="hero-foot mono">
+        <span>Clientes. Processos. Atendimento. Vendas.</span>
+        <span>Role para descobrir <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 V20 M6 14 L12 20 L18 14"></path></svg></span>
       </div>
     </div>
   </section>
 
-  <!-- Antes e depois -->
-  <section class="section tight band">
+  <!-- 01 Antes e depois -->
+  <section class="section">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2 class="h2">O que sai da rotina da equipe</h2>
+        <div>
+          <p class="kicker mono"><span class="n">01 /</span>O que sai da rotina</p>
+          <h2 class="display">Menos telefone tocando.<br>Mais <span class="serif">tempo para a equipe.</span></h2>
+        </div>
+        <p style="justify-self: end;">O que hoje vive em planilha, pasta e WhatsApp passa a ter lugar, prazo e histórico.</p>
       </div>
-      <dl class="swap reveal">
-        <div class="swap-head" aria-hidden="true"><span>Hoje</span><span>Com o portal</span></div>
-        <div><dt>Cliente ligando para saber do processo</dt><dd>Ele acompanha pelo portal e é avisado quando algo muda.</dd></div>
-        <div><dt>Vendas e comissões em planilhas</dt><dd>O Sales HUB calcula bruto, líquido e ranking sozinho.</dd></div>
-        <div><dt>Chargebacks perdidos no WhatsApp</dt><dd>Cada contestação tem prazo, status e histórico.</dd></div>
-        <div><dt>Documentos espalhados em pastas</dt><dd>Cada cliente tem os documentos e a linha do tempo juntos.</dd></div>
-      </dl>
+      <div class="compare reveal">
+        <div class="compare-col before">
+          <p class="mono">Hoje</p>
+          <ol>
+            <li>Cliente ligando para saber do processo</li>
+            <li>Vendas e comissões em planilhas</li>
+            <li>Chargebacks perdidos no WhatsApp</li>
+            <li>Documentos espalhados em pastas</li>
+          </ol>
+        </div>
+        <div class="compare-col after">
+          <p class="mono">Com o portal</p>
+          <ol>
+            <li>Ele acompanha pelo portal e é avisado quando algo muda.</li>
+            <li>O Sales HUB calcula bruto, líquido e ranking sozinho.</li>
+            <li>Cada contestação tem prazo, status e histórico.</li>
+            <li>Cada cliente tem os documentos e a linha do tempo juntos.</li>
+          </ol>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Tour pelas telas -->
+  <!-- 02 Telas -->
   <section class="section" id="telas">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2 class="h2">Por dentro do sistema</h2>
+        <div>
+          <p class="kicker mono"><span class="n">02 /</span>Por dentro do sistema</p>
+          <h2 class="display">Uma visão.<br><span class="serif">Toda a operação.</span></h2>
+        </div>
+        <p style="justify-self: end;">Telas reais do portal em uso, com dados fictícios.</p>
       </div>
       <div class="tour">
         <div class="tour-row">
           <div class="tour-copy reveal">
-            <p class="eyebrow">Clientes</p>
-            <h3 class="h3">Cada processo organizado</h3>
-            <ul class="list">
+            <p class="mono">01 / Clientes</p>
+            <h3 class="display">Cada processo <span class="serif">organizado.</span></h3>
+            <ul class="ticks">
               <li>Status, progresso e linha do tempo de cada cliente</li>
               <li>Documentos e tags por cliente</li>
               <li>Mudou o status, o cliente é avisado sozinho</li>
             </ul>
           </div>
-          <div class="tour-media reveal">
-            <img class="shot" src="/assets/img/portal/clientes.jpg" alt="Carteira de clientes com status e a ficha de uma cliente com linha do tempo e documentos" width="1114" height="784" loading="lazy">
+          <div class="frame reveal">
+            <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Clientes</span></div>
+            <img src="/assets/img/portal/clientes.jpg" alt="Carteira de clientes com status e a ficha de uma cliente com linha do tempo e documentos" width="1114" height="784" loading="lazy">
           </div>
         </div>
         <div class="tour-row">
           <div class="tour-copy reveal">
-            <p class="eyebrow">Portal do cliente</p>
-            <h3 class="h3">Seu cliente acompanha tudo</h3>
-            <ul class="list">
+            <p class="mono">02 / Portal do cliente</p>
+            <h3 class="display">Seu cliente <span class="serif">acompanha tudo.</span></h3>
+            <ul class="ticks">
               <li>Instala no celular e recebe notificações</li>
               <li>Andamento, documentos e conversa com a equipe</li>
               <li>Assistente responde as dúvidas comuns e abre chamados</li>
               <li>Aceite dos termos registrado com data e IP</li>
             </ul>
           </div>
-          <div class="tour-media phones reveal">
-            <img class="shot" src="/assets/img/portal/app-processo.jpg" alt="Cliente vendo o andamento do processo, documentos e histórico no celular" width="478" height="944" loading="lazy">
-            <img class="shot" src="/assets/img/portal/app-conversa.jpg" alt="Assistente do portal com opções de atendimento e chamado aberto" width="478" height="944" loading="lazy">
+          <div class="phones reveal">
+            <div class="phone"><img src="/assets/img/portal/app-processo.jpg" alt="Cliente vendo o andamento do processo, documentos e histórico no celular" width="478" height="944" loading="lazy"></div>
+            <div class="phone"><img src="/assets/img/portal/app-conversa.jpg" alt="Assistente do portal com opções de atendimento e chamado aberto" width="478" height="944" loading="lazy"></div>
           </div>
         </div>
         <div class="tour-row">
           <div class="tour-copy reveal">
-            <p class="eyebrow">Atendimento</p>
-            <h3 class="h3">Nenhuma mensagem sem resposta</h3>
-            <ul class="list">
+            <p class="mono">03 / Atendimento</p>
+            <h3 class="display">Nenhuma mensagem <span class="serif">sem resposta.</span></h3>
+            <ul class="ticks">
               <li>Caixa de entrada com chamados por assunto</li>
               <li>A equipe é avisada no celular quando o cliente escreve</li>
               <li>Histórico completo de cada conversa</li>
             </ul>
           </div>
-          <div class="tour-media reveal">
-            <img class="shot" src="/assets/img/portal/atendimento.jpg" alt="Tela de atendimento com a lista de conversas e a troca de mensagens com uma cliente" width="1114" height="784" loading="lazy">
+          <div class="frame reveal">
+            <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Atendimento</span></div>
+            <img src="/assets/img/portal/atendimento.jpg" alt="Tela de atendimento com a lista de conversas e a troca de mensagens com uma cliente" width="1114" height="784" loading="lazy">
           </div>
         </div>
         <div class="tour-row">
           <div class="tour-copy reveal">
-            <p class="eyebrow">Sales HUB</p>
-            <h3 class="h3">Vendas e comissões sem planilha</h3>
-            <ul class="list">
+            <p class="mono">04 / Sales HUB</p>
+            <h3 class="display">Vendas e comissões <span class="serif">sem planilha.</span></h3>
+            <ul class="ticks">
               <li>Bruto e líquido, já com a taxa do cartão por parcela</li>
               <li>Ranking de consultores e vendas por setor</li>
               <li>Relatórios em CSV e PDF</li>
             </ul>
           </div>
-          <div class="tour-media reveal">
-            <img class="shot" src="/assets/img/portal/vendas.jpg" alt="Sales HUB com vendas brutas e líquidas, ranking de consultores e horários das vendas" width="1114" height="784" loading="lazy">
+          <div class="frame reveal">
+            <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Sales HUB</span></div>
+            <img src="/assets/img/portal/vendas.jpg" alt="Sales HUB com vendas brutas e líquidas, ranking de consultores e horários das vendas" width="1114" height="784" loading="lazy">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Automação -->
+  <!-- 03 Automação e segurança -->
   <section class="section band">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2 class="h2">O que o portal faz sozinho</h2>
+        <div>
+          <p class="kicker mono"><span class="n">03 /</span>O que o portal faz sozinho</p>
+          <h2 class="display">Rotinas que<br><span class="serif">rodam por você.</span></h2>
+        </div>
       </div>
-      <div class="features three">
-        <article class="feature reveal">
-          <h3>Acesso automático</h3>
-          <p class="muted">Cadastrou o cliente, o link de acesso vai por WhatsApp e e-mail.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Lembretes</h3>
-          <p class="muted">Quem não entrou em 2 dias recebe um novo convite, em horário comercial.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Avisos ao cliente</h3>
-          <p class="muted">Resposta, novo status ou documento: o cliente fica sabendo na hora.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Avisos à equipe</h3>
-          <p class="muted">Mensagem de cliente e venda nova chegam no celular de quem precisa.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Backup diário</h3>
-          <p class="muted">Cópia automática dos dados e documentos, guardada por 30 dias.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Migração fácil</h3>
-          <p class="muted">Importamos seus clientes e convidamos cada um para o novo portal.</p>
-        </article>
+      <div class="grid-cards">
+        <article class="g-card reveal"><p class="mono">01</p><h3>Acesso automático</h3><p>Cadastrou o cliente, o link de acesso vai por WhatsApp e e-mail.</p></article>
+        <article class="g-card reveal"><p class="mono">02</p><h3>Lembretes</h3><p>Quem não entrou em 2 dias recebe um novo convite, em horário comercial.</p></article>
+        <article class="g-card reveal"><p class="mono">03</p><h3>Avisos ao cliente</h3><p>Resposta, novo status ou documento: o cliente fica sabendo na hora.</p></article>
+        <article class="g-card reveal"><p class="mono">04</p><h3>Avisos à equipe</h3><p>Mensagem de cliente e venda nova chegam no celular de quem precisa.</p></article>
+        <article class="g-card reveal"><p class="mono">05</p><h3>Backup diário</h3><p>Cópia automática dos dados e documentos, guardada por 30 dias.</p></article>
+        <article class="g-card reveal"><p class="mono">06</p><h3>Migração fácil</h3><p>Importamos seus clientes e convidamos cada um para o novo portal.</p></article>
+      </div>
+
+      <div class="section-head reveal" style="margin-top: 130px;">
+        <div>
+          <p class="kicker mono"><span class="n">04 /</span>Acesso e segurança</p>
+          <h2 class="display">Cada um vê<br><span class="serif">o que é seu.</span></h2>
+        </div>
+      </div>
+      <div class="grid-cards">
+        <article class="g-card reveal"><p class="mono">01</p><h3>Perfis de acesso</h3><p>Equipe e administradores. Só o administrador apaga registros.</p></article>
+        <article class="g-card reveal"><p class="mono">02</p><h3>Dados isolados</h3><p>Cada cliente vê apenas o próprio processo e documentos.</p></article>
+        <article class="g-card reveal"><p class="mono">03</p><h3>Registro de ações</h3><p>Tudo o que a equipe faz fica registrado, com busca.</p></article>
+        <article class="g-card reveal"><p class="mono">04</p><h3>Termos com prova</h3><p>Aceite guardado com versão, data, IP e aparelho.</p></article>
+        <article class="g-card reveal"><p class="mono">05</p><h3>Funciona no celular</h3><p>Equipe e clientes usam no computador ou no celular.</p></article>
+        <article class="g-card reveal"><p class="mono">06</p><h3>Relatórios</h3><p>Funil de adesão, vendas, chargebacks e uso do portal.</p></article>
       </div>
     </div>
   </section>
 
-  <!-- Segurança -->
-  <section class="section">
+  <!-- 05 Vídeo -->
+  <section class="section" id="video">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2 class="h2">Acesso e segurança</h2>
+        <div>
+          <p class="kicker mono"><span class="n">05 /</span>Em movimento</p>
+          <h2 class="display">O sistema em<br><span class="serif">um minuto e meio.</span></h2>
+        </div>
+        <p style="justify-self: end;">Um passeio rápido pelas telas, sem áudio.</p>
       </div>
-      <div class="features three">
-        <article class="feature reveal">
-          <h3>Perfis de acesso</h3>
-          <p class="muted">Equipe e administradores. Só o administrador apaga registros.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Dados isolados</h3>
-          <p class="muted">Cada cliente vê apenas o próprio processo e documentos.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Registro de ações</h3>
-          <p class="muted">Tudo o que a equipe faz fica registrado, com busca.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Termos com prova</h3>
-          <p class="muted">Aceite guardado com versão, data, IP e aparelho.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Funciona no celular</h3>
-          <p class="muted">Equipe e clientes usam no computador ou no celular.</p>
-        </article>
-        <article class="feature reveal">
-          <h3>Relatórios</h3>
-          <p class="muted">Funil de adesão, vendas, chargebacks e uso do portal.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Vídeo -->
-  <section class="section band" id="video">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2 class="h2">O sistema em um minuto e meio</h2>
-      </div>
-      <figure class="card video-frame reveal">
-        <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>Portal de Processos · dados fictícios</span></div>
+      <figure class="frame video-wrap reveal" style="margin-inline: 0;">
+        <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Portal de Processos · dados fictícios</span></div>
         <video src="/assets/media/portal-de-processos.mp4" poster="/assets/media/portal-de-processos-capa.jpg" width="1280" height="720" muted playsinline preload="none" controls aria-label="Vídeo de apresentação do Portal de Processos, sem áudio"></video>
       </figure>
     </div>
   </section>
 
-  <!-- Perguntas -->
-  <section class="section">
+  <!-- 06 Perguntas -->
+  <section class="section faq" id="perguntas">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2 class="h2">Perguntas frequentes</h2>
+        <div>
+          <p class="kicker mono"><span class="n">06 /</span>Perguntas frequentes</p>
+          <h2 class="display">Antes da<br><span class="serif">demonstração.</span></h2>
+        </div>
+        <aside>
+          <p>O que mais perguntam sobre o portal. Escolha o que quer saber.</p>
+          <a class="arrow-link" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Tenho%20uma%20pergunta%20sobre%20o%20Portal%20de%20Processos." target="_blank" rel="noopener">Prefere uma conversa? <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
+        </aside>
       </div>
-      <div class="faq reveal">
-        <details>
-          <summary>Precisa instalar alguma coisa?</summary>
-          <p>Não. O portal abre no navegador, no computador ou no celular. Quem quiser pode instalar como app com um toque e passa a receber notificações.</p>
-        </details>
-        <details>
-          <summary>Funciona no iPhone?</summary>
-          <p>Sim. No iPhone, as notificações funcionam com o app instalado na tela de início (iOS 16.4 ou mais novo). O portal mostra o passo a passo para o cliente.</p>
-        </details>
-        <details>
-          <summary>Fica com a marca do meu escritório?</summary>
-          <p>Fica. A implantação inclui a sua marca e a importação dos seus clientes, que recebem o convite para o novo portal.</p>
-        </details>
-        <details>
-          <summary>Os dados dos meus clientes ficam seguros?</summary>
-          <p>Cada cliente vê só o próprio processo, a equipe tem perfis de acesso e tudo fica registrado. Há backup diário e cuidado com a LGPD desde o desenho.</p>
-        </details>
-        <details>
-          <summary>E depois que estiver no ar?</summary>
-          <p>A Warden Labs fica de guarda: acompanha o que roda, corrige o que falha e evolui o portal junto com a sua operação.</p>
-        </details>
+      <div class="faq-box reveal">
+        <div class="faq-list">
+          <p class="mono">O que passa pela sua cabeça?</p>
+          <div role="tablist" aria-label="Perguntas frequentes" aria-orientation="vertical">
+            <button class="q" type="button" role="tab" id="q-0" aria-controls="a-0" aria-selected="true"><span class="n">01</span>Precisa instalar alguma coisa?<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></button>
+            <button class="q" type="button" role="tab" id="q-1" aria-controls="a-1" aria-selected="false"><span class="n">02</span>Funciona no iPhone?<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></button>
+            <button class="q" type="button" role="tab" id="q-2" aria-controls="a-2" aria-selected="false"><span class="n">03</span>Fica com a marca do meu escritório?<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></button>
+            <button class="q" type="button" role="tab" id="q-3" aria-controls="a-3" aria-selected="false"><span class="n">04</span>Os dados dos meus clientes ficam seguros?<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></button>
+            <button class="q" type="button" role="tab" id="q-4" aria-controls="a-4" aria-selected="false"><span class="n">05</span>E depois que estiver no ar?<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></button>
+          </div>
+          <p class="foot">Sem complicar.<br>Desde a primeira resposta.</p>
+        </div>
+        <div class="faq-panels">
+          <div class="answer" id="a-0" role="tabpanel" aria-labelledby="q-0">
+            <div class="answer-top"><span class="mono">01 / Instalação</span><svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 25 V11 a8 8 0 0 1 16 0 V25 M8 25 V12 a4 4 0 0 1 8 0 V25 M2 25 H22"></path><circle cx="12" cy="18" r="1" fill="currentColor"></circle></svg></div>
+            <h3>Precisa instalar alguma coisa?</h3>
+            <p>Não. O portal abre no navegador, no computador ou no celular. Quem quiser pode instalar como app com um toque e passa a receber notificações.</p>
+            <a class="arrow-link" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Portal%20de%20Processos." target="_blank" rel="noopener">Agendar demonstração <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
+          </div>
+          <div class="answer" id="a-1" role="tabpanel" aria-labelledby="q-1" hidden>
+            <div class="answer-top"><span class="mono">02 / iPhone</span><svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 25 V11 a8 8 0 0 1 16 0 V25 M8 25 V12 a4 4 0 0 1 8 0 V25 M2 25 H22"></path><circle cx="12" cy="18" r="1" fill="currentColor"></circle></svg></div>
+            <h3>Funciona no iPhone?</h3>
+            <p>Sim. No iPhone, as notificações funcionam com o app instalado na tela de início (iOS 16.4 ou mais novo). O portal mostra o passo a passo para o cliente.</p>
+            <a class="arrow-link" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Portal%20de%20Processos." target="_blank" rel="noopener">Agendar demonstração <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
+          </div>
+          <div class="answer" id="a-2" role="tabpanel" aria-labelledby="q-2" hidden>
+            <div class="answer-top"><span class="mono">03 / Sua marca</span><svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 25 V11 a8 8 0 0 1 16 0 V25 M8 25 V12 a4 4 0 0 1 8 0 V25 M2 25 H22"></path><circle cx="12" cy="18" r="1" fill="currentColor"></circle></svg></div>
+            <h3>Fica com a marca do meu escritório?</h3>
+            <p>Fica. A implantação inclui a sua marca e a importação dos seus clientes, que recebem o convite para o novo portal.</p>
+            <a class="arrow-link" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Portal%20de%20Processos." target="_blank" rel="noopener">Agendar demonstração <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
+          </div>
+          <div class="answer" id="a-3" role="tabpanel" aria-labelledby="q-3" hidden>
+            <div class="answer-top"><span class="mono">04 / Segurança</span><svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 25 V11 a8 8 0 0 1 16 0 V25 M8 25 V12 a4 4 0 0 1 8 0 V25 M2 25 H22"></path><circle cx="12" cy="18" r="1" fill="currentColor"></circle></svg></div>
+            <h3>Os dados dos meus clientes ficam seguros?</h3>
+            <p>Cada cliente vê só o próprio processo, a equipe tem perfis de acesso e tudo fica registrado. Há backup diário e cuidado com a LGPD desde o desenho.</p>
+            <a class="arrow-link" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Portal%20de%20Processos." target="_blank" rel="noopener">Agendar demonstração <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
+          </div>
+          <div class="answer" id="a-4" role="tabpanel" aria-labelledby="q-4" hidden>
+            <div class="answer-top"><span class="mono">05 / Guarda contínua</span><svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 25 V11 a8 8 0 0 1 16 0 V25 M8 25 V12 a4 4 0 0 1 8 0 V25 M2 25 H22"></path><circle cx="12" cy="18" r="1" fill="currentColor"></circle></svg></div>
+            <h3>E depois que estiver no ar?</h3>
+            <p>A Warden Labs fica de guarda: acompanha o que roda, corrige o que falha e evolui o portal junto com a sua operação.</p>
+            <a class="arrow-link" href="/#como-trabalhamos">Como trabalhamos <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contato -->
-  <section class="section contact band">
+  <!-- Chamada final -->
+  <section class="cta" id="contato">
     <div class="wrap">
-      <h2 class="h2 reveal">Leve o Portal de Processos para a sua empresa</h2>
-      <p class="lead reveal">A implantação inclui a sua marca e a importação dos clientes que você já tem. Peça uma demonstração para ver funcionando.</p>
-      <div class="actions reveal">
-        <a class="btn btn-primary" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Portal%20de%20Processos." target="_blank" rel="noopener">
-          Agendar demonstração
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12 H19 M13 6 L19 12 L13 18"></path></svg>
+      <div class="cta-top mono">
+        <span>A implantação inclui a sua marca e os seus clientes.</span>
+        <svg width="24" height="26" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 25 V11 a8 8 0 0 1 16 0 V25 M8 25 V12 a4 4 0 0 1 8 0 V25 M2 25 H22"></path><circle cx="12" cy="18" r="1" fill="currentColor"></circle></svg>
+      </div>
+      <div class="cta-main">
+        <h2 class="display reveal">Leve o Portal<br>para a sua <span class="serif">empresa.</span></h2>
+        <a class="cta-circle" href="https://wa.me/5511954358162?text=Ol%C3%A1%21%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Portal%20de%20Processos." target="_blank" rel="noopener" aria-label="Agendar demonstração no WhatsApp">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 L18 6 M8 6 H18 V16"></path></svg>
         </a>
-        <a class="btn btn-ghost" href="/">Conhecer a Warden Labs</a>
+      </div>
+      <div class="cta-foot">
+        <p>Peça uma demonstração para ver funcionando.<br>A gente importa os clientes que você já tem.</p>
+        <a class="arrow-link" href="/">Conhecer a Warden Labs <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 L17 7 M8 7 H17 V16"></path></svg></a>
       </div>
     </div>
   </section>
@@ -289,15 +336,26 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <div class="footer-brand">
-      <svg width="24" height="24" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M12 56 V28 a20 20 0 0 1 40 0 V56 Z" fill="none" stroke="#f5b042" stroke-width="6" stroke-linejoin="round"></path>
-        <circle cx="32" cy="40" r="6" fill="#f5b042"></circle>
-      </svg>
-      <span class="brand-name">Warden Labs</span>
-      <span class="muted footer-tag">Guardiões da sua operação.</span>
+    <div class="footer-top">
+      <a class="brand" href="/" aria-label="Warden Labs, voltar ao início">
+        <svg width="34" height="24" viewBox="0 0 34 24" aria-hidden="true"><path d="M3 5 L9 20 L13.5 10 L17 18 L20.5 10 L25 20 L31 5" fill="none" stroke="#f5b042" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round"></path></svg>
+        <span class="brand-word">
+          <span class="brand-name"><b>warden</b><span>labs</span></span>
+          <span class="brand-tag">Tecnologia com propósito</span>
+        </span>
+      </a>
+      <p>Tecnologia que abre caminhos.<br>Gente que segue com você.</p>
+      <div class="footer-contact">
+        <a href="mailto:jefinhozit00@icloud.com">jefinhozit00@icloud.com <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M9 7 H17 V15"></path></svg></a>
+        <a href="https://wa.me/5511954358162" target="_blank" rel="noopener">+55 (11) 95435-8162 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 L17 7 M9 7 H17 V15"></path></svg></a>
+      </div>
     </div>
-    <span class="muted footer-copy">© 2026 Warden Labs</span>
+    <p class="wordmark" aria-hidden="true"><b>warden</b><span>labs</span><sup></sup></p>
+    <div class="footer-bottom">
+      <span>© 2026 Warden Labs</span>
+      <span>FEITO COM INTENÇÃO. MANTIDO COM CUIDADO.</span>
+      <a href="#cabecalho">VOLTAR AO TOPO <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20 V4 M6 10 L12 4 L18 10"></path></svg></a>
+    </div>
   </div>
 </footer>
 

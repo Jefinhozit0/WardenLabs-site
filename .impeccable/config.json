@@ -1,0 +1,116 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "public/index.html"
+        ],
+        "createdAt": "2026-11-11T13:58:29.156Z",
+        "reason": "Claude: the eyebrow above the hero headline is copied from the user's reference video, which they asked to match exactly"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "public/landing-pages/index.html"
+        ],
+        "createdAt": "2026-11-11T14:20:09.640Z",
+        "reason": "Claude: subpages reuse the hero eyebrow from the user's reference video, which the user asked to apply to all pages"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "public/portal-de-processos/index.html"
+        ],
+        "createdAt": "2026-11-11T14:20:10.097Z",
+        "reason": "Claude: subpages reuse the hero eyebrow from the user's reference video, which the user asked to apply to all pages"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "public/404.html"
+        ],
+        "createdAt": "2026-11-11T14:20:10.601Z",
+        "reason": "Claude: subpages reuse the hero eyebrow from the user's reference video, which the user asked to apply to all pages"
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "public/index.html"
+        ],
+        "createdAt": "2026-11-11T15:05:39.498Z",
+        "reason": "Claude: rising embers and lantern glow belong to the old animated Brasa that the user explicitly asked to bring back"
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "public/landing-pages/index.html"
+        ],
+        "createdAt": "2026-11-11T15:05:40.092Z",
+        "reason": "Claude: rising embers and lantern glow belong to the old animated Brasa that the user explicitly asked to bring back"
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "public/portal-de-processos/index.html"
+        ],
+        "createdAt": "2026-11-11T15:05:40.546Z",
+        "reason": "Claude: rising embers and lantern glow belong to the old animated Brasa that the user explicitly asked to bring back"
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "public/404.html"
+        ],
+        "createdAt": "2026-11-11T15:05:41.035Z",
+        "reason": "Claude: rising embers and lantern glow belong to the old animated Brasa that the user explicitly asked to bring back"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "public/index.html"
+        ],
+        "createdAt": "2026-11-11T15:05:41.499Z",
+        "reason": "Claude: rising embers and lantern glow belong to the old animated Brasa that the user explicitly asked to bring back"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "public/landing-pages/index.html"
+        ],
+        "createdAt": "2026-11-11T15:05:42.068Z",
+        "reason": "Claude: rising embers and lantern glow belong to the old animated Brasa that the user explicitly asked to bring back"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "public/portal-de-processos/index.html"
+        ],
+        "createdAt": "2026-11-11T15:05:42.579Z",
+        "reason": "Claude: rising embers and lantern glow belong to the old animated Brasa that the user explicitly asked to bring back"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "public/404.html"
+        ],
+        "createdAt": "2026-11-11T15:05:43.086Z",
+        "reason": "Claude: rising embers and lantern glow belong to the old animated Brasa that the user explicitly asked to bring back"
+      }
+    ]
+  }
+}
