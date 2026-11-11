@@ -1,0 +1,14 @@
+{
+  "name": "brasa-animacoes",
+  "private": true,
+  "type": "module",
+  "description": "Gera os vídeos verticais do Brasa para marketing",
+  "scripts": {
+    "videos": "node gerar.mjs",
+    "previa": "node gerar.mjs --previa"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.2.0",
+    "puppeteer-core": "^23.11.1"
+  }
+}

@@ -36,6 +36,28 @@ No Blender, dá para recriar com um pouco de *Bloom* (Eevee) ou com a emissão d
 - Fundo noturno: `#0d1013` · Pedra: `#151a1f` / `#1d242b`
 - Texto claro: `#eef2f4`
 
+## Vídeos animados (`animacoes/`)
+
+Quatro vídeos verticais (1080×1920, MP4, sem som) prontos para Reels, Stories e TikTok, em `animacoes/videos/`:
+
+| Vídeo | O que mostra |
+|---|---|
+| `brasa-oi.mp4` | O Brasa acena e se apresenta. "Menos manual. Mais possível." |
+| `brasa-lanterna.mp4` | Começa no escuro, a lanterna acende. "A gente acende o caminho." |
+| `brasa-apresenta.mp4` | Os três serviços: Sentinela, Guardião e Fortaleza. |
+| `brasa-comemora.mp4` | Escopo, prazo e investimento combinados, e a guarda contínua. |
+
+Para mudar um texto ou um movimento, edite `animacoes/estudio.js` (os textos ficam em `CLIPES`, no começo do arquivo).
+Depois, dentro da pasta `animacoes`:
+
+```
+npm install        (só na primeira vez)
+npm run previa     (abre o endereço que aparecer para ver no navegador)
+npm run videos     (gera os MP4 de novo; leva uns 10 minutos)
+```
+
+Precisa do Chrome instalado. Os vídeos usam o mesmo modelo 3D do site.
+
 ## Gerar de novo ou em outra pose
 
 O modelo é montado em código, em `public/assets/js/brasa3d.js` (função `buildBrasa`).
