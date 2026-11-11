@@ -2,6 +2,19 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var mobile = window.matchMedia('(max-width: 900px)');
 
+  // Se o Brasa 3D não carregar (navegador antigo, erro de rede), mostra o Brasa em SVG
+  function brasa2d() {
+    document.querySelectorAll('[data-brasa3d]').forEach(function (h) {
+      var box = h.closest('[data-follow]');
+      if (box && !box.classList.contains('has-3d')) box.classList.add('no-3d');
+    });
+  }
+  if (!('noModule' in HTMLScriptElement.prototype)) brasa2d();
+  window.addEventListener('error', function (e) {
+    if (e.target && e.target.tagName === 'SCRIPT' && /brasa3d|three/.test(e.target.src || '')) brasa2d();
+  }, true);
+  setTimeout(brasa2d, 12000);
+
   // Cabeçalho ganha borda ao rolar
   var header = document.getElementById('cabecalho');
   function onHeader() { header.classList.toggle('scrolled', window.scrollY > 8); }

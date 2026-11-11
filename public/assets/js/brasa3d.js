@@ -343,8 +343,9 @@ function create(host) {
   }
   document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); else if (visible) start(); });
 
-  if (reduce) { look.lastMove = Infinity; frame(performance.now()); }
-  else start();
+  // desenha o primeiro quadro na hora, sem esperar o próximo requestAnimationFrame
+  if (reduce) look.lastMove = Infinity;
+  frame(performance.now());
 
   return {
     host,
@@ -359,15 +360,19 @@ function create(host) {
   };
 }
 
+const fallback = host => host.closest('[data-follow]')?.classList.add('no-3d');
 if (canWebGL()) {
   const instances = [];
   document.querySelectorAll('[data-brasa3d]').forEach(host => {
-    const inst = create(host);
-    if (inst) instances.push(inst);
+    let inst = null;
+    try { inst = create(host); } catch (e) { inst = null; }
+    if (inst) instances.push(inst); else fallback(host);
   });
   if (instances.length && !reduce) {
     window.addEventListener('pointermove', e => instances.forEach(i => i.pointer(e.clientX, e.clientY)), { passive: true });
   }
+} else {
+  document.querySelectorAll('[data-brasa3d]').forEach(fallback);
 }
 
 // Usado também para exportar o modelo e as imagens de marketing

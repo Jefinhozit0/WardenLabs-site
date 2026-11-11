@@ -151,7 +151,11 @@ h1, h2, h3, p { margin: 0; }
 .brasa-pupils { transition: transform .15s ease-out; }
 /* Brasa 3D: ocupa o lugar do SVG quando o navegador tem WebGL */
 .brasa-3d { position: absolute; left: 50%; bottom: 3%; width: 82%; aspect-ratio: 1 / 1.08; transform: translateX(-50%); pointer-events: none; }
-.brasa-3d canvas { display: block; width: 100%; height: 100%; }
+.brasa-3d canvas { display: block; width: 100%; height: 100%; opacity: 0; transition: opacity .6s ease; }
+.has-3d .brasa-3d canvas { opacity: 1; }
+/* o Brasa em SVG fica escondido enquanto o 3D carrega; só aparece se o 3D falhar (.no-3d) */
+.brasa-3d ~ .brasa-wrap { visibility: hidden; opacity: 0; transition: opacity .6s ease; }
+.no-3d .brasa-3d ~ .brasa-wrap { visibility: visible; opacity: 1; }
 .has-3d .brasa-wrap { display: none; }
 .essence-brasa .brasa-3d { bottom: 0; height: 100%; width: auto; max-width: 100%; }
 .arch .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #fff; opacity: .6; animation: twinkle 3s ease-in-out infinite; }
