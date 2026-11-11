@@ -157,6 +157,29 @@ h1, h2, h3, p { margin: 0; }
 .brasa-3d ~ .brasa-wrap { visibility: hidden; opacity: 0; transition: opacity .6s ease; }
 .no-3d .brasa-3d ~ .brasa-wrap { visibility: visible; opacity: 1; }
 .has-3d .brasa-wrap { display: none; }
+
+/* Easter egg: o balão de fala e a reação do Brasa em SVG */
+.brasa-bubble {
+  position: absolute; left: 50%; top: 11%; z-index: 6; margin: 0;
+  width: max-content; max-width: min(80%, 260px); padding: 10px 15px;
+  border: 1px solid var(--line); border-radius: 14px; background: var(--card-2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .35);
+  color: var(--ink); font-size: 14px; font-weight: 600; line-height: 1.35; text-align: center; text-wrap: balance;
+  opacity: 0; transform: translate(-50%, 8px) scale(.96); transform-origin: 50% 100%;
+  transition: opacity .25s ease, transform .4s var(--ease); pointer-events: none;
+}
+.brasa-bubble::after {
+  content: ""; position: absolute; left: 50%; bottom: -7px; width: 12px; height: 12px;
+  background: inherit; border: inherit; border-width: 0 1px 1px 0; transform: translateX(-50%) rotate(45deg);
+}
+.brasa-bubble.show { opacity: 1; transform: translate(-50%, 0) scale(1); }
+.essence-brasa .brasa-bubble { top: 4%; }
+.poked .brasa-float { animation: brasa-hop .6s var(--ease) 1; }
+.poked .brasa-head { animation: brasa-shake .8s ease-out 1; }
+.poked .brasa-light { animation: brasa-flare 1.4s ease-out 1; }
+@keyframes brasa-hop { 0%, 100% { transform: translateY(0); } 45% { transform: translateY(-22px); } }
+@keyframes brasa-shake { 0%, 100% { transform: rotate(0); } 15% { transform: rotate(-9deg); } 35% { transform: rotate(8deg); } 55% { transform: rotate(-5deg); } 75% { transform: rotate(3deg); } }
+@keyframes brasa-flare { 0%, 100% { opacity: 1; filter: none; } 35% { opacity: 1; filter: brightness(1.6); } }
 .essence-brasa .brasa-3d { bottom: 0; height: 100%; width: auto; max-width: 100%; }
 .arch .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #fff; opacity: .6; animation: twinkle 3s ease-in-out infinite; }
 .arch-bottom { position: absolute; left: 0; right: 0; bottom: 26px; padding: 0 26px; display: flex; align-items: center; color: #eef2f4; z-index: 2; font-size: 12px; font-weight: 500; }

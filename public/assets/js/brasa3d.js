@@ -268,6 +268,9 @@ function create(host) {
   const look = { x: 0, y: 0, tx: 0, ty: 0, lastMove: 0 };
   let blinkAt = 2 + Math.random() * 3, blinkT = -1;
   let visible = true, raf = 0, last = performance.now(), t0 = last, shown = false;
+  // Easter egg: o site.js avisa com 'brasa:poke' quando passam o cursor várias vezes por cima
+  let pokeT = -1;
+  const POKE = 2.6;
 
   function resize() {
     const w = host.clientWidth, h = host.clientHeight;
@@ -316,8 +319,37 @@ function create(host) {
     b.light.intensity = 9 * flick;
     b.lanternGlow.material.opacity = 0.75 + 0.25 * flick;
 
+    // Reação ao easter egg: chacoalha a cabeça, dá um pulinho, fecha os olhos sorrindo e acena
+    if (pokeT >= 0) {
+      pokeT += dt;
+      const p = pokeT;
+      const ramp = (a, b) => Math.min(1, Math.max(0, (p - a) / (b - a)));
+      const ease = x => x * x * (3 - 2 * x);
+      // chacoalhada de "ei, para com isso"
+      if (p < 0.9) b.head.rotation.y += Math.sin(p * 22) * 0.38 * (1 - p / 0.9);
+      // pulinho
+      if (p < 0.55) {
+        const h = Math.sin(Math.PI * p / 0.55);
+        b.root.position.y += h * 0.32;
+        b.shadow.scale.setScalar(1 - h * 0.35);
+      }
+      // aceno com o braço livre
+      const up = ease(ramp(0.45, 0.85)) * (1 - ease(ramp(2.15, POKE)));
+      b.armL.rotation.z += -2.35 * up + Math.sin(p * 13) * 0.32 * up;
+      b.head.rotation.z += 0.12 * up;
+      b.head.rotation.y += -0.25 * up;
+      // olhos fechados de sorriso no meio da reação
+      const happy = ramp(0.5, 0.65) * (1 - ramp(2.0, 2.2));
+      b.eyeL.scale.y = b.eyeR.scale.y = 1 - happy * 0.72;
+      // a lanterna acende mais forte
+      const flare = Math.sin(Math.PI * ramp(0, 1.4));
+      b.light.intensity *= 1 + flare * 1.6;
+      b.lanternGlow.material.opacity = Math.min(1, b.lanternGlow.material.opacity + flare * 0.3);
+      if (p >= POKE) { pokeT = -1; b.eyeL.scale.y = b.eyeR.scale.y = 1; }
+    }
+
     // Pisca de vez em quando
-    if (blinkT < 0 && t > blinkAt) blinkT = 0;
+    if (pokeT < 0 && blinkT < 0 && t > blinkAt) blinkT = 0;
     if (blinkT >= 0) {
       blinkT += dt;
       const p = blinkT / 0.16;
@@ -334,6 +366,13 @@ function create(host) {
 
   function start() { if (!raf && !reduce) { last = performance.now(); raf = requestAnimationFrame(frame); } }
   function stop() { if (raf) cancelAnimationFrame(raf); raf = 0; }
+
+  host.closest('[data-follow]')?.addEventListener('brasa:poke', () => {
+    if (reduce) return;
+    pokeT = 0; blinkT = -1;
+    look.tx = 0; look.ty = -0.15; look.lastMove = performance.now();
+    start();
+  });
 
   new ResizeObserver(resize).observe(host);
   resize();

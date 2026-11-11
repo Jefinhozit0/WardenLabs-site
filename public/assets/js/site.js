@@ -60,6 +60,59 @@
     }, { passive: true });
   }
 
+  // Easter egg: passar o cursor várias vezes por cima do Brasa (ou tocar nele algumas vezes) faz ele reagir
+  var falas = [
+    'Ei! Tô de guarda aqui.',
+    'Isso faz cócegas.',
+    'Calma, a lanterna não apaga.',
+    'Procurando o próximo passo? É só descer.',
+    'Tá bom, tá bom. Oi pra você também.'
+  ];
+  var fala = 0;
+  document.querySelectorAll('[data-follow]').forEach(function (box) {
+    var dentro = false, passadas = [], toques = [], pausa = 0, bubble = null, tBubble = 0;
+    // a área do corpo do Brasa, um pouco menor que a caixa dele
+    function noBrasa(x, y) {
+      var el = box.classList.contains('has-3d') ? box.querySelector('.brasa-3d') : box.querySelector('.brasa-wrap');
+      if (!el) return false;
+      var r = el.getBoundingClientRect();
+      if (!r.width) return false;
+      return x > r.left + r.width * 0.2 && x < r.right - r.width * 0.2 && y > r.top + r.height * 0.1 && y < r.bottom - r.height * 0.05;
+    }
+    function recentes(lista, ms, agora) { while (lista.length && agora - lista[0] > ms) lista.shift(); return lista.length; }
+    function reage() {
+      var agora = Date.now();
+      if (agora < pausa) return;
+      pausa = agora + 5000; passadas.length = 0; toques.length = 0;
+      if (!bubble) {
+        bubble = document.createElement('p');
+        bubble.className = 'brasa-bubble';
+        bubble.setAttribute('role', 'status');
+        box.appendChild(bubble);
+      }
+      bubble.textContent = falas[fala++ % falas.length];
+      bubble.classList.remove('show'); void bubble.offsetWidth; bubble.classList.add('show');
+      clearTimeout(tBubble); tBubble = setTimeout(function () { bubble.classList.remove('show'); }, 3400);
+      box.classList.remove('poked'); void box.offsetWidth; box.classList.add('poked');
+      setTimeout(function () { box.classList.remove('poked'); }, 2600);
+      box.dispatchEvent(new CustomEvent('brasa:poke'));
+    }
+    window.addEventListener('pointermove', function (e) {
+      if (e.pointerType === 'touch') return;
+      var agora = noBrasa(e.clientX, e.clientY);
+      if (agora && !dentro) {
+        var t = Date.now(); passadas.push(t);
+        if (recentes(passadas, 3000, t) >= 5) reage();
+      }
+      dentro = agora;
+    }, { passive: true });
+    window.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'touch' || !noBrasa(e.clientX, e.clientY)) return;
+      var t = Date.now(); toques.push(t);
+      if (recentes(toques, 2500, t) >= 4) reage();
+    }, { passive: true });
+  });
+
   // Vídeos: só tocam quando aparecem na tela
   if (!reduce && 'IntersectionObserver' in window) {
     var vio = new IntersectionObserver(function (entries) {
